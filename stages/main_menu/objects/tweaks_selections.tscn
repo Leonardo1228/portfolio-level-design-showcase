@@ -1,0 +1,1229 @@
+[gd_scene format=3 uid="uid://kiw6yxeov3fj"]
+
+[ext_resource type="Script" uid="uid://cn67joohcklbn" path="res://engine/components/ui/generic/menu_items_controller.gd" id="1_e1b0h"]
+[ext_resource type="Script" uid="uid://tt1f58jc38ld" path="res://stages/main_menu/scripts/tweak_category_sel.gd" id="2_2sf4t"]
+[ext_resource type="Script" uid="uid://rhnp6nhlfpxo" path="res://stages/main_menu/scripts/tweak_skin_editor_enter.gd" id="2_pysyt"]
+[ext_resource type="AudioStream" uid="uid://d3bnsvly1e68j" path="res://stages/main_menu/sounds/tweak_on.mp3" id="3_ltw82"]
+[ext_resource type="FontVariation" uid="uid://cvpi00hlh84rv" path="res://engine/fonts/font_variations/tweaks_font_title.tres" id="4_u65r8"]
+[ext_resource type="Script" uid="uid://b3jhw08i8hvn2" path="res://stages/main_menu/scripts/tweak_exit.gd" id="5_cvfb0"]
+[ext_resource type="Script" uid="uid://beysu21c0vky3" path="res://stages/main_menu/scripts/minix_selectors_anim.gd" id="5_dhfy0"]
+[ext_resource type="Texture2D" uid="uid://byetryv2ltxkl" path="res://stages/main_menu/textures/check-mark-check.png" id="5_fjyvq"]
+[ext_resource type="Script" uid="uid://b2fxpfbja6b7u" path="res://stages/main_menu/scripts/tweak_skin_selector.gd" id="6_skinpk"]
+[ext_resource type="PackedScene" uid="uid://c588emavhoisj" path="res://stages/main_menu/objects/reset_data.tscn" id="9_rp4k8"]
+[ext_resource type="FontVariation" uid="uid://c5ust2bgtp407" path="res://engine/fonts/font_variations/tweaks_font_var.tres" id="10_5c803"]
+[ext_resource type="Script" uid="uid://loalfcd04s87" path="res://stages/main_menu/scripts/tweak_quality.gd" id="12_4kuwt"]
+[ext_resource type="Script" uid="uid://cfbbqpbg8evf4" path="res://stages/main_menu/scripts/tweak_cursor_custom.gd" id="12_w1vvf"]
+[ext_resource type="Script" uid="uid://cl31gyhukew6s" path="res://engine/components/ui/generic/menu_selector.gd" id="15_lbl8e"]
+[ext_resource type="PackedScene" uid="uid://cvr48m6x7dx4d" path="res://stages/main_menu/objects/tweak_boolean.tscn" id="15_mxo6u"]
+[ext_resource type="SpriteFrames" uid="uid://br3qktscdu8fx" path="res://engine/objects/players/prefabs/animations/mario/selector.tres" id="16_4e6sj"]
+[ext_resource type="Script" uid="uid://b1fji5ve3eoe0" path="res://engine/components/ui/generic/selector_player_animation.gd" id="17_xjt7h"]
+[ext_resource type="Script" uid="uid://dr7dh7gdcrv3h" path="res://stages/main_menu/scripts/camera_tweaks_menu.gd" id="18_kemdi"]
+[ext_resource type="Script" uid="uid://bh6vwtr642ta5" path="res://stages/main_menu/objects/character_editor/skin_open_dir.gd" id="skin_opn"]
+[ext_resource type="PackedScene" uid="uid://c0xaj1ukf1axe" path="res://stages/main_menu/objects/character_editor/skin_pack_selection.tscn" id="skin_psc"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_4hroi"]
+color = Color(0, 0, 0.329412, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugvyo"]
+resource_local_to_scene = true
+atlas = ExtResource("5_fjyvq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lobhh"]
+atlas = ExtResource("5_fjyvq")
+region = Rect2(0, 16, 16, 16)
+
+[node name="Control" type="Control" unique_id=1613905644]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="Tweaks" type="VBoxContainer" parent="." unique_id=1971870260]
+custom_minimum_size = Vector2(0, 432)
+layout_mode = 0
+offset_left = 168.0
+offset_top = 24.0
+offset_right = 624.0
+offset_bottom = 456.0
+theme_override_constants/separation = 14
+script = ExtResource("1_e1b0h")
+focused = false
+prev_screen_node_path = NodePath("Exit")
+
+[node name="HSeparator7" type="HSeparator" parent="Tweaks" unique_id=780614122]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="GameplayButton" type="HBoxContainer" parent="Tweaks" unique_id=1914369653]
+layout_mode = 2
+script = ExtResource("2_2sf4t")
+move_to_path = NodePath("../../Gameplay")
+menu_selector_path = NodePath("../../Selector2")
+show_desc_bool = true
+
+[node name="Label" type="Label" parent="Tweaks/GameplayButton" unique_id=737462704]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "gameplay..."
+uppercase = true
+
+[node name="Value" type="Label" parent="Tweaks/GameplayButton" unique_id=500157939]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "press %s"
+uppercase = true
+
+[node name="AestheticsButton" type="HBoxContainer" parent="Tweaks" unique_id=264579301]
+layout_mode = 2
+script = ExtResource("2_2sf4t")
+move_to_path = NodePath("../../Aesthetic")
+menu_selector_path = NodePath("../../Selector3")
+reset_to = 1
+show_desc_bool = true
+
+[node name="Label" type="Label" parent="Tweaks/AestheticsButton" unique_id=2102265178]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "aesthetic..."
+uppercase = true
+
+[node name="Value" type="Label" parent="Tweaks/AestheticsButton" unique_id=823508852]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "press %s"
+uppercase = true
+
+[node name="MiscaleneousButton" type="HBoxContainer" parent="Tweaks" unique_id=1180418198]
+layout_mode = 2
+script = ExtResource("2_2sf4t")
+move_to_path = NodePath("../../Presets")
+menu_selector_path = NodePath("../../Selector4")
+reset_to = 2
+show_desc_bool = true
+
+[node name="Label" type="Label" parent="Tweaks/MiscaleneousButton" unique_id=1928786389]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "miscellaneous..."
+uppercase = true
+
+[node name="Value" type="Label" parent="Tweaks/MiscaleneousButton" unique_id=450417463]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "press %s"
+uppercase = true
+
+[node name="HSeparator8" type="HSeparator" parent="Tweaks" unique_id=595663432]
+layout_mode = 2
+theme_override_constants/separation = 4
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="Label" type="Label" parent="Tweaks/HSeparator8" unique_id=1751418272]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 456.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 1, 0.792157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "SKINS"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HSeparator9" type="HSeparator" parent="Tweaks" unique_id=1434468835]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="SkinPackSelect" type="HBoxContainer" parent="Tweaks" unique_id=1388043303]
+layout_mode = 2
+script = ExtResource("6_skinpk")
+move_to_path = NodePath("../../SkinSelector")
+menu_selector_path = NodePath("../../Selector6")
+reset_to = 3
+tweak_description_text = "set a modern skin for mario or luigi, or make your own character! you can also download custom skins of other players or share yours in our discord server! a guide on how to make your own skins is located there too.
+
+this list is expanded automatically when skins are detected in a skins folder, and applied on exit from this menu."
+
+[node name="Label" type="Label" parent="Tweaks/SkinPackSelect" unique_id=695981542]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "skin pack..."
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tweaks/SkinPackSelect" unique_id=599364450]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 8
+
+[node name="Value" type="Label" parent="Tweaks/SkinPackSelect/HBoxContainer" unique_id=1490040894]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0.79, 1, 0.909, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 13
+text = "mario"
+uppercase = true
+
+[node name="arrow" type="Label" parent="Tweaks/SkinPackSelect/HBoxContainer/Value" unique_id=1953231986]
+layout_mode = 0
+offset_left = -32.0
+offset_right = -7.0
+offset_bottom = 16.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 13
+text = "<--"
+uppercase = true
+script = ExtResource("5_dhfy0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tweaks/SkinPackSelect/HBoxContainer" unique_id=364979467]
+layout_mode = 2
+
+[node name="arrow" type="Label" parent="Tweaks/SkinPackSelect/HBoxContainer/HBoxContainer" unique_id=1278129087]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 13
+text = "-->"
+uppercase = true
+script = ExtResource("5_dhfy0")
+left_side = false
+
+[node name="Value" type="Label" parent="Tweaks/SkinPackSelect" unique_id=1202249238]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "press %s"
+uppercase = true
+
+[node name="QuickSkinSettingsButton" type="HBoxContainer" parent="Tweaks" unique_id=197705189]
+layout_mode = 2
+script = ExtResource("2_2sf4t")
+move_to_path = NodePath("../../QuickSkinSettings")
+menu_selector_path = NodePath("../../Selector5")
+reset_to = 4
+
+[node name="Label" type="Label" parent="Tweaks/QuickSkinSettingsButton" unique_id=802562561]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "skin setup..."
+uppercase = true
+
+[node name="Value" type="Label" parent="Tweaks/QuickSkinSettingsButton" unique_id=1387979590]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "press %s"
+uppercase = true
+
+[node name="HSeparator5" type="HSeparator" parent="Tweaks" unique_id=269466472]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="Label" type="Label" parent="Tweaks/HSeparator5" unique_id=1766562065]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 456.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 1, 0.792157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "general"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HSeparator6" type="HSeparator" parent="Tweaks" unique_id=1568639193]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tweaks" unique_id=766745248]
+layout_mode = 2
+script = ExtResource("2_pysyt")
+
+[node name="Label" type="Label" parent="Tweaks/HBoxContainer" unique_id=1101179289]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "character"
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tweaks/HBoxContainer" unique_id=1643404444]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 8
+
+[node name="Value" type="Label" parent="Tweaks/HBoxContainer/HBoxContainer" unique_id=27489676]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0.79, 1, 0.909, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "mario"
+uppercase = true
+
+[node name="arrow" type="Label" parent="Tweaks/HBoxContainer/HBoxContainer/Value" unique_id=892256499]
+layout_mode = 0
+offset_left = -32.0
+offset_right = -7.0
+offset_bottom = 16.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "<--"
+uppercase = true
+script = ExtResource("5_dhfy0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Tweaks/HBoxContainer/HBoxContainer" unique_id=1486716862]
+layout_mode = 2
+
+[node name="arrow" type="Label" parent="Tweaks/HBoxContainer/HBoxContainer/HBoxContainer" unique_id=1011811137]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "-->"
+uppercase = true
+script = ExtResource("5_dhfy0")
+left_side = false
+
+[node name="RowMouseInMenus" parent="Tweaks" unique_id=14890051 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "mouse_in_menus"
+default_value = true
+tweak_title_text = "mouse input in menus"
+tweak_description_text = "you will be able to select and interact with menu controls such as this one using your mouse cursor."
+
+[node name="RowResetData" parent="Tweaks" unique_id=1970165229 instance=ExtResource("9_rp4k8")]
+layout_mode = 2
+
+[node name="Exit" type="HBoxContainer" parent="Tweaks" unique_id=861987772]
+layout_mode = 2
+size_flags_vertical = 10
+script = ExtResource("5_cvfb0")
+
+[node name="Label" type="Label" parent="Tweaks/Exit" unique_id=1755428096]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "save and go back"
+uppercase = true
+
+[node name="Gameplay" type="VBoxContainer" parent="." unique_id=1343830714]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 24.0
+offset_right = 1136.0
+offset_bottom = 456.0
+theme_override_constants/separation = 14
+script = ExtResource("1_e1b0h")
+focused = false
+prev_screen_node_path = NodePath("Exit")
+
+[node name="HSeparator" type="HSeparator" parent="Gameplay" unique_id=847554201]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="Label" type="Label" parent="Gameplay/HSeparator" unique_id=215321128]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 456.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 1, 0.792157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "gameplay"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HSeparator4" type="HSeparator" parent="Gameplay" unique_id=1101156271]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="RowProgress" parent="Gameplay" unique_id=828201849 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "progress_continue"
+default_value = true
+tweak_title_text = "save suspended game on exit
+(aka progress continue)"
+tweak_description_text = "each time you complete a level, a one-time save is made with your entire progress, including your power state, lives, and the level you were on. You can access it at any time."
+
+[node name="RowBowser" parent="Gameplay" unique_id=59250529 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "bowser_stomping"
+tweak_title_text = "less bouncy bowser stomping"
+tweak_description_text = "Mimics the behavior from the original game, where you receive a push forwards each time Bowser is stomped, and you cannot bounce as high.
+
+Disabling this tweak makes stomping on Bowser identical to other enemies."
+
+[node name="RowCrouch" parent="Gameplay" unique_id=939901263 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "crouch_jumping"
+default_value = true
+tweak_title_text = "crouch jumping"
+tweak_description_text = "This tweak allows you to jump while crouching with Super or better form.
+
+If you jump while crouching, you won't be able to accelerate beyond the walking speed limit, but you will maintain your previous speed. In this state, there is no passive deceleration when no buttons are pressed.
+
+If disabled, bricks above your head will break automatically while crouching. If enabled, you will need to jump to break bricks or activate bonus blocks."
+
+[node name="RowCoyote" parent="Gameplay" unique_id=717744619 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "coyote_time"
+default_value = true
+tweak_title_text = "coyote time (recommended)"
+tweak_description_text = "running off of a ledge will grant a very brief period of additional time to make a jump."
+
+[node name="RowSuperJumpBug" parent="Gameplay" unique_id=271206292 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "super_jump_bug"
+tweak_title_text = "super jump bug (not recommended)"
+tweak_description_text = "(From the original mario forever)
+if grounded, stomping on enemies will not immediately make you bounce off.
+
+notice: any unintended behavior of the game (crashes, etc.) derived from this bug simulation is not supported, use at your own risk.
+
+this tweak is not available in expert mode."
+
+[node name="RowCheckpoints" parent="Gameplay" unique_id=950927111 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "checkpoints"
+default_value = true
+tweak_title_text = "mid-level checkpoints"
+tweak_description_text = "v4.4 added checkpoints to the whole game. Disabling this tweak makes the game more challenging."
+
+[node name="RowStompCombo" parent="Gameplay" unique_id=2068265327 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "stomping_combo"
+tweak_title_text = "stomping combos"
+tweak_description_text = "The stomping combos were not a thing in the original Mario Forever. A combo goes like this:
+
+100 > 200 > 400 > 500 > 800 > 1000 > 2000 > 4000 > 5000 > 8000 > 1up > back to 100.
+
+Notice: this tweak has no effect in Mario Minix and Expert Mode."
+
+[node name="RowSpring" parent="Gameplay" unique_id=967520965 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "better_springboards"
+tweak_title_text = "easier springboards (no timing required)"
+tweak_description_text = "When disabled, springboards require the user to press the jump button up to 1/10 of a second in advance before touching the springboard to bounce higher.
+
+Enabling this tweak makes you always jump at the maximum height as long as you hold the jump button, making springboards easier to control."
+
+[node name="RowAutorun" parent="Gameplay" unique_id=106260418 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "autorun"
+tweak_title_text = "autorun"
+tweak_description_text = "When enabled, it inverts the behavior of the run button: holding it will make you walk instead, and vice versa."
+
+[node name="RowRetroDmg" parent="Gameplay" unique_id=620121535 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "retro_damage_system"
+tweak_title_text = "\"SMB1 DAMAGE SYSTEM\" challenge mode"
+tweak_description_text = "Like in Super Mario Bros. 1, getting hit while powered up causes the player to shrink to the small form instead of going to the super form first.
+
+This challenge is completely optional, and there is no reward for it."
+
+[node name="Exit" type="HBoxContainer" parent="Gameplay" unique_id=515467120]
+layout_mode = 2
+size_flags_vertical = 10
+script = ExtResource("2_2sf4t")
+move_to_path = NodePath("../../Tweaks")
+menu_selector_path = NodePath("../../Selector")
+
+[node name="Label" type="Label" parent="Gameplay/Exit" unique_id=1245063021]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "go back"
+uppercase = true
+
+[node name="Aesthetic" type="VBoxContainer" parent="." unique_id=901595499]
+layout_mode = 0
+offset_left = 1176.0
+offset_top = 24.0
+offset_right = 1632.0
+offset_bottom = 456.0
+theme_override_constants/separation = 14
+script = ExtResource("1_e1b0h")
+focused = false
+prev_screen_node_path = NodePath("Exit")
+
+[node name="HSeparator2" type="HSeparator" parent="Aesthetic" unique_id=429877758]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="Label" type="Label" parent="Aesthetic/HSeparator2" unique_id=413537007]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 456.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 1, 0.792157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "aesthetic"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HSeparator3" type="HSeparator" parent="Aesthetic" unique_id=1858922489]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="Aesthetic" unique_id=1459879228]
+layout_mode = 2
+script = ExtResource("12_4kuwt")
+tweak_description_text = "This provides quick access to the quality setting from the options screen."
+
+[node name="Label" type="Label" parent="Aesthetic/HBoxContainer9" unique_id=1866908449]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "quality"
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Aesthetic/HBoxContainer9" unique_id=289523942]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 8
+
+[node name="Value" type="Label" parent="Aesthetic/HBoxContainer9/HBoxContainer" unique_id=873289539]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0.79, 1, 0.909, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "minimum"
+uppercase = true
+
+[node name="arrow" type="Label" parent="Aesthetic/HBoxContainer9/HBoxContainer/Value" unique_id=1492604168]
+layout_mode = 0
+offset_left = -36.0
+offset_right = -8.0
+offset_bottom = 17.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "<--"
+uppercase = true
+script = ExtResource("5_dhfy0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Aesthetic/HBoxContainer9/HBoxContainer" unique_id=274701300]
+layout_mode = 2
+
+[node name="arrow" type="Label" parent="Aesthetic/HBoxContainer9/HBoxContainer/HBoxContainer" unique_id=2118068789]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "-->"
+uppercase = true
+script = ExtResource("5_dhfy0")
+left_side = false
+
+[node name="RowCircleFade" parent="Aesthetic" unique_id=96086222 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "replace_circle_transitions_with_fades"
+tweak_title_text = "replace circle transitions with crossfades"
+tweak_description_text = "If enabled, crossfades will replace nearly all circle transitions between scenes, pausing the game in the process.
+Such transitions take slightly less time than the default circle ones.
+
+This behavior is similar to versions 5.0+ of the original game."
+
+[node name="RowSmoothCam" parent="Aesthetic" unique_id=681013204 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "enable_smooth_cam_transitions"
+default_value = true
+tweak_title_text = "smooth camera transitions between areas"
+tweak_description_text = "smoothes out camera movement between certain areas, such as the save game room."
+
+[node name="RowBlur" parent="Aesthetic" unique_id=489039392 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "enable_blur_transitions"
+default_value = true
+tweak_title_text = "blur transitions between pipe warp areas"
+tweak_description_text = "adds a blur transition each time the player warps into a new area mid-level. disable this tweak to make the new area load immediately."
+
+[node name="RowPauseSuit" parent="Aesthetic" unique_id=246894938 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "pause_on_suit_change"
+tweak_title_text = "pause on player suit change"
+tweak_description_text = "each time the player receives a powerup or takes damage, the entire game pauses for a second, giving the user more time to react."
+
+[node name="RowSkid" parent="Aesthetic" unique_id=1534190941 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "player_skid_animation"
+tweak_title_text = "player skidding effects"
+tweak_description_text = "enables the skidding animation and particles, similar to something you would see in other mario games.
+
+note: this tweak does not affect gameplay in any way!"
+
+[node name="RowSecretsNotif" parent="Aesthetic" unique_id=995033045 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "secrets_notification"
+default_value = true
+tweak_title_text = "achievement notifications"
+tweak_description_text = "each time an achievement gets unlocked or progresses further, a pop-up will appear for a few seconds, and, if unlocked, a sound effect will play."
+
+[node name="HBoxContainer26" type="HBoxContainer" parent="Aesthetic" unique_id=1319713309]
+layout_mode = 2
+script = ExtResource("12_w1vvf")
+tweak_name = "custom_mouse_cursor"
+tweak_description_text = "This tweak replaces the system mouse cursor visuals with a custom image from the Mario Worker 1.0 source files."
+selected_sound = ExtResource("3_ltw82")
+
+[node name="Label" type="Label" parent="Aesthetic/HBoxContainer26" unique_id=892070447]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "custom mouse cursor"
+uppercase = true
+
+[node name="Toggle" type="TextureRect" parent="Aesthetic/HBoxContainer26" unique_id=2085104923]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_ugvyo")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Aesthetic/HBoxContainer26/Toggle" unique_id=917968592]
+modulate = Color(0, 0, 0, 0.462745)
+z_index = -1
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+size_flags_horizontal = 10
+texture = SubResource("AtlasTexture_lobhh")
+stretch_mode = 2
+
+[node name="RowMouseHoverSnd" parent="Aesthetic" unique_id=1798066244 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "mouse_select_sound"
+default_value = true
+tweak_title_text = "unique sound when hovering over
+menus with mouse"
+tweak_description_text = "when enabled, selecting menus using the mouse cursor will replace the hover sound with a much less noisy one."
+
+[node name="RowNoAudio" parent="Aesthetic" unique_id=134775312 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "no_audio_effects"
+tweak_title_text = "force disable audio effects (reverb)"
+tweak_description_text = "available in medium quality and higher, certain areas can contain audio effects applied to sounds, such as reverb.
+when this tweak is enabled, audio effects are never applied."
+
+[node name="Exit" type="HBoxContainer" parent="Aesthetic" unique_id=805913803]
+layout_mode = 2
+size_flags_vertical = 10
+script = ExtResource("2_2sf4t")
+move_to_path = NodePath("../../Tweaks")
+menu_selector_path = NodePath("../../Selector")
+
+[node name="Label" type="Label" parent="Aesthetic/Exit" unique_id=1061839892]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "go back"
+uppercase = true
+
+[node name="Presets" type="VBoxContainer" parent="." unique_id=1975263533]
+custom_minimum_size = Vector2(0, 432)
+layout_mode = 0
+offset_left = 1672.0
+offset_top = 24.0
+offset_right = 2128.0
+offset_bottom = 456.0
+theme_override_constants/separation = 14
+script = ExtResource("1_e1b0h")
+focused = false
+prev_screen_node_path = NodePath("Exit")
+
+[node name="HSeparator2" type="HSeparator" parent="Presets" unique_id=92746171]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="Label" type="Label" parent="Presets/HSeparator2" unique_id=651623815]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 456.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 1, 0.792157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "miscellaneous"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HSeparator3" type="HSeparator" parent="Presets" unique_id=371488882]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="RowLoadFirst" parent="Presets" unique_id=1959964484 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "load_save_from_world_start"
+tweak_title_text = "save pipe: always first level of the world"
+tweak_description_text = "Copies the behavior over from the original game, where save pipes ignore the level you were on.
+
+Notice: enabling this tweak will not reset your save pipe until you enter it.
+
+Notice 2: enabling this tweak will disable the level selector after beating the game. The world selector is unaffected."
+
+[node name="RowF3" parent="Presets" unique_id=1213683597 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "f3_keybind"
+tweak_title_text = "f3 keybind to save game room"
+tweak_description_text = "enables a quick shortcut to save room using the f3 key.
+
+notice: if you are in options and have not selected \"exit\" (or the escape key) to go back, pressing f3 will not save the options you've changed! it will also not reset the scene if you're already in the save room."
+
+[node name="RowF4" parent="Presets" unique_id=233613770 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "f4_keybind"
+tweak_title_text = "f4 keybind to main menu"
+tweak_description_text = "enables a quick shortcut to main menu using the f4 key.
+
+notice: you cannot reset the scene if you are already in the main menu."
+
+[node name="RowRevShop" parent="Presets" unique_id=1714830565 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "revamp_item_shop"
+tweak_title_text = "require pressing up in item shop"
+tweak_description_text = "if disabled, touching a power-up in the item shop will immediately buy an item in the save room.
+
+if enabled, it also requires the player to press the moving up key to buy an item."
+
+[node name="RowFasterDel" parent="Presets" unique_id=1575417146 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "faster_save_deletion"
+tweak_title_text = "save pipe: faster save deletion"
+tweak_description_text = "if disabled, deleting saves in the save game room takes 3 seconds (or 2.5s in 1.2x game speed).
+
+if enabled, the time is reduced to 0.6 seconds (0.5s in 1.2x game speed)."
+
+[node name="RowConsole" parent="Presets" unique_id=256666644 instance=ExtResource("15_mxo6u")]
+layout_mode = 2
+tweak_name = "console_enabled"
+tweak_title_text = "enable cheat commands (f1 key)"
+tweak_description_text = "gives an ability to toggle debug console with the f1 key on keyboard.
+
+please note: console commands are not supported and may result in crash in certain conditions.
+
+warning: enabling this tweak will disable achievement progression and profile saving!
+to restore achievements if still disabled, please, restart the game.
+to enable saving with the console, use \"cv_forcesave\" and \"cv_forcesave_suspended\" commands. note that using these commands will mark your saves as \"cheated\" until you reset them."
+
+[node name="Exit" type="HBoxContainer" parent="Presets" unique_id=1060717215]
+layout_mode = 2
+size_flags_vertical = 10
+script = ExtResource("2_2sf4t")
+move_to_path = NodePath("../../Tweaks")
+menu_selector_path = NodePath("../../Selector")
+
+[node name="Label" type="Label" parent="Presets/Exit" unique_id=6848555]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "go back"
+uppercase = true
+
+[node name="QuickSkinSettings" type="VBoxContainer" parent="." unique_id=612657600]
+custom_minimum_size = Vector2(0, 432)
+layout_mode = 0
+offset_left = 2168.0
+offset_top = 24.0
+offset_right = 2624.0
+offset_bottom = 456.0
+theme_override_constants/separation = 14
+script = ExtResource("1_e1b0h")
+focused = false
+prev_screen_node_path = NodePath("Exit")
+
+[node name="HSeparator2" type="HSeparator" parent="QuickSkinSettings" unique_id=36885056]
+layout_mode = 2
+theme_override_constants/separation = 4
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="Label" type="Label" parent="QuickSkinSettings/HSeparator2" unique_id=1603805606]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 456.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 1, 0.792157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "skin setup"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HSeparator3" type="HSeparator" parent="QuickSkinSettings" unique_id=1467325265]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="HBoxOpenDir" type="HBoxContainer" parent="QuickSkinSettings" unique_id=1211332394]
+layout_mode = 2
+script = ExtResource("skin_opn")
+tweak_description_text = "opens up a folder on your file system where this skin is located."
+
+[node name="Label" type="Label" parent="QuickSkinSettings/HBoxOpenDir" unique_id=1403451273]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "open directory"
+uppercase = true
+
+[node name="Value" type="Label" parent="QuickSkinSettings/HBoxOpenDir" unique_id=30582108]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "press %s"
+uppercase = true
+
+[node name="HBoxOpenDocs" type="HBoxContainer" parent="QuickSkinSettings" unique_id=551735888]
+layout_mode = 2
+script = ExtResource("skin_opn")
+is_docs = true
+tweak_description_text = "opens up your browser with a skin guide web page."
+
+[node name="Label" type="Label" parent="QuickSkinSettings/HBoxOpenDocs" unique_id=1932857153]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "open documentation"
+uppercase = true
+
+[node name="Value" type="Label" parent="QuickSkinSettings/HBoxOpenDocs" unique_id=968354463]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "press %s"
+uppercase = true
+
+[node name="Exit" type="HBoxContainer" parent="QuickSkinSettings" unique_id=1717859233]
+layout_mode = 2
+size_flags_vertical = 10
+script = ExtResource("2_2sf4t")
+move_to_path = NodePath("../../Tweaks")
+menu_selector_path = NodePath("../../Selector")
+
+[node name="Label" type="Label" parent="QuickSkinSettings/Exit" unique_id=1454523733]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "go back"
+uppercase = true
+
+[node name="SkinSelector" type="VBoxContainer" parent="." unique_id=1969645870]
+custom_minimum_size = Vector2(0, 432)
+layout_mode = 0
+offset_left = 2664.0
+offset_top = 24.0
+offset_right = 3120.0
+offset_bottom = 456.0
+theme_override_constants/separation = 14
+script = ExtResource("1_e1b0h")
+focused = false
+prev_screen_node_path = NodePath("Exit")
+
+[node name="HSeparator2" type="HSeparator" parent="SkinSelector" unique_id=331103573]
+layout_mode = 2
+theme_override_constants/separation = 4
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="Label" type="Label" parent="SkinSelector/HSeparator2" unique_id=832367573]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 456.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 1, 0.792157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_u65r8")
+theme_override_font_sizes/font_size = 22
+text = "Select a skin pack"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HSeparator3" type="HSeparator" parent="SkinSelector" unique_id=356577981]
+layout_mode = 2
+theme_override_constants/separation = 4
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="SkinPackNone" parent="SkinSelector" unique_id=614173663 instance=ExtResource("skin_psc")]
+layout_mode = 2
+
+[node name="HSeparatorSpawnTweaks" type="HSeparator" parent="SkinSelector" unique_id=1820579803]
+layout_mode = 2
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_4hroi")
+
+[node name="Exit" type="HBoxContainer" parent="SkinSelector" unique_id=1534123167]
+layout_mode = 2
+size_flags_vertical = 10
+script = ExtResource("2_2sf4t")
+move_to_path = NodePath("../../Tweaks")
+menu_selector_path = NodePath("../../Selector")
+
+[node name="Label" type="Label" parent="SkinSelector/Exit" unique_id=525814871]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.792157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("10_5c803")
+theme_override_font_sizes/font_size = 22
+text = "go back"
+uppercase = true
+
+[node name="Selector" type="Node2D" parent="." unique_id=425681790]
+physics_interpolation_mode = 1
+script = ExtResource("15_lbl8e")
+smooth_speed = 0.4
+position_padding = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Selector" unique_id=2120295155]
+sprite_frames = ExtResource("16_4e6sj")
+script = ExtResource("17_xjt7h")
+
+[node name="Selector2" type="Node2D" parent="." unique_id=1487858236]
+physics_interpolation_mode = 1
+script = ExtResource("15_lbl8e")
+smooth_speed = 0.4
+position_padding = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Selector2" unique_id=901097660]
+sprite_frames = ExtResource("16_4e6sj")
+script = ExtResource("17_xjt7h")
+
+[node name="Selector3" type="Node2D" parent="." unique_id=1626091113]
+physics_interpolation_mode = 1
+script = ExtResource("15_lbl8e")
+smooth_speed = 0.4
+position_padding = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Selector3" unique_id=432249020]
+sprite_frames = ExtResource("16_4e6sj")
+script = ExtResource("17_xjt7h")
+
+[node name="Selector4" type="Node2D" parent="." unique_id=1148198839]
+physics_interpolation_mode = 1
+script = ExtResource("15_lbl8e")
+smooth_speed = 0.4
+position_padding = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Selector4" unique_id=1392405304]
+sprite_frames = ExtResource("16_4e6sj")
+script = ExtResource("17_xjt7h")
+
+[node name="Selector5" type="Node2D" parent="." unique_id=1662260715]
+physics_interpolation_mode = 1
+script = ExtResource("15_lbl8e")
+smooth_speed = 0.4
+position_padding = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Selector5" unique_id=1336670380]
+sprite_frames = ExtResource("16_4e6sj")
+script = ExtResource("17_xjt7h")
+
+[node name="Selector6" type="Node2D" parent="." unique_id=370105046]
+physics_interpolation_mode = 1
+script = ExtResource("15_lbl8e")
+smooth_speed = 0.4
+position_padding = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Selector6" unique_id=2006439123]
+sprite_frames = ExtResource("16_4e6sj")
+script = ExtResource("17_xjt7h")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=434573603]
+physics_interpolation_mode = 1
+process_callback = 0
+limit_left = 0
+limit_top = 0
+limit_right = 640
+limit_bottom = 480
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 25.0
+editor_draw_screen = false
+script = ExtResource("18_kemdi")
+menu_controller_path = NodePath("../Tweaks")
+
+[connection signal="selected" from="Tweaks" to="Selector" method="handle_selection"]
+[connection signal="selected" from="Tweaks" to="Camera2D" method="handle_selection"]
+[connection signal="selected" from="Gameplay" to="Selector2" method="handle_selection"]
+[connection signal="selected" from="Gameplay" to="Camera2D" method="handle_selection"]
+[connection signal="selected" from="Aesthetic" to="Selector3" method="handle_selection"]
+[connection signal="selected" from="Aesthetic" to="Camera2D" method="handle_selection"]
+[connection signal="selected" from="Presets" to="Selector4" method="handle_selection"]
+[connection signal="selected" from="Presets" to="Camera2D" method="handle_selection"]
+[connection signal="selected" from="QuickSkinSettings" to="Selector5" method="handle_selection"]
+[connection signal="selected" from="QuickSkinSettings" to="Camera2D" method="handle_selection"]
+[connection signal="selected" from="SkinSelector" to="Selector6" method="handle_selection"]
+[connection signal="selected" from="SkinSelector" to="Camera2D" method="handle_selection"]
+[connection signal="selection_entered" from="SkinSelector/Exit" to="Tweaks/SkinPackSelect" method="_on_exit_selection_entered"]
