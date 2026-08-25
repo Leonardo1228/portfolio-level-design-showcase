@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ba88wd2pd4o0t"]
+
+[ext_resource type="Texture2D" uid="uid://b5eju7i5djfyl" path="res://graphics/underground_custom/underground_plant_tall.png" id="1_6bie2"]
+
+[node name="UndergroundPlantTall" type="Sprite2D" unique_id=716009760]
+position = Vector2(0, -33)
+texture = ExtResource("1_6bie2")

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cq7bggoc8wxuk"]
+
+[ext_resource type="Texture2D" uid="uid://cw4bdc4wvo1rx" path="res://graphics/retro_tiles/retro_tree_short_alt.png" id="1_fbwrm"]
+
+[node name="RetroTreeShortAlt" type="Sprite2D" unique_id=1858349935]
+z_index = -10
+position = Vector2(0, -16)
+texture = ExtResource("1_fbwrm")

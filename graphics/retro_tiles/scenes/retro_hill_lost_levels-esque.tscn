@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ettlvftaqkq4"]
+
+[ext_resource type="Texture2D" uid="uid://byqpptvb0wmwj" path="res://graphics/retro_tiles/retro_hill.png" id="1_0fuh2"]
+
+[node name="RetroHill" type="Sprite2D" unique_id=1344904831]
+z_index = -12
+position = Vector2(0, -64)
+texture = ExtResource("1_0fuh2")

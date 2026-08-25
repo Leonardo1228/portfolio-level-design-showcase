@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bfp1tl5g0f1e5"]
+
+[ext_resource type="Texture2D" uid="uid://dp5ac117sq0bu" path="res://graphics/underground_custom/underground_mushrooms.png" id="1_dd52e"]
+
+[node name="UndergroundMushrooms" type="Sprite2D" unique_id=1603197282]
+texture = ExtResource("1_dd52e")

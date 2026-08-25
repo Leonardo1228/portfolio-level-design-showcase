@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bee8lytu2xeor"]
+
+[ext_resource type="Texture2D" uid="uid://b83adlyc3ynlf" path="res://graphics/underground_custom/underground_corpse.png" id="1_5xqqa"]
+
+[node name="UndergroundCorpse" type="Sprite2D" unique_id=58004810]
+texture = ExtResource("1_5xqqa")

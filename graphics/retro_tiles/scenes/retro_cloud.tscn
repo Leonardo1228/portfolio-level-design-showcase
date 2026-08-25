@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dcplv3phxm8h1"]
+
+[ext_resource type="Texture2D" uid="uid://cgggb10cw63wp" path="res://graphics/retro_tiles/retro_cloud.png" id="1_uvrce"]
+[ext_resource type="Texture2D" uid="uid://dcda5qmebxxtr" path="res://engine/tilesets/overworld/gfx/cloud_light_effect.png" id="2_53uey"]
+[ext_resource type="Script" uid="uid://0h3x5dwndovw" path="res://engine/scripts/nodes/effects/quality_visible.gd" id="3_1wyqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uv1ui"]
+atlas = ExtResource("1_uvrce")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53uey"]
+atlas = ExtResource("1_uvrce")
+region = Rect2(64, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wyqr"]
+atlas = ExtResource("1_uvrce")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sqhvk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uv1ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53uey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wyqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53uey")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=541954089]
+sprite_frames = SubResource("SpriteFrames_sqhvk")
+autoplay = "default"
+frame_progress = 0.9780454
+
+[node name="CloudLightEffect" type="Sprite2D" parent="." unique_id=1271305972]
+visible = false
+z_index = -1
+position = Vector2(0, 4)
+texture = ExtResource("2_53uey")
+script = ExtResource("3_1wyqr")

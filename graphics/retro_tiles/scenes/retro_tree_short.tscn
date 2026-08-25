@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://4n47yk0rnkbt"]
+
+[ext_resource type="Texture2D" uid="uid://cx1j3l22uckya" path="res://graphics/retro_tiles/retro_tree_short.png" id="1_5qr3c"]
+
+[node name="RetroTreeShort" type="Sprite2D" unique_id=1304415403]
+z_index = -10
+position = Vector2(0, -16)
+texture = ExtResource("1_5qr3c")

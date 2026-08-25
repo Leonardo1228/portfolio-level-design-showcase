@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dohw6frrakpgs"]
+
+[ext_resource type="Texture2D" uid="uid://qrr857e3wpbx" path="res://graphics/retro_tiles/retro_bush.png" id="1_g5s23"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gchpo"]
+atlas = ExtResource("1_g5s23")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qa4g1"]
+atlas = ExtResource("1_g5s23")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkmwu"]
+atlas = ExtResource("1_g5s23")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_87k04"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gchpo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qa4g1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkmwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qa4g1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1939097492]
+sprite_frames = SubResource("SpriteFrames_87k04")
+autoplay = "default"
+frame = 1
+frame_progress = 0.12537591
