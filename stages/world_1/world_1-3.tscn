@@ -3,86 +3,86 @@
 [ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_ipu61"]
 [ext_resource type="AudioStream" uid="uid://bqiy8kvcsy0rk" path="res://engine/scripts/classes/level/complete.ogg" id="2_br37x"]
 [ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="3_omobe"]
-[ext_resource type="Script" uid="uid://bxx54cyd4mjsq" path="res://engine/objects/core/music_loader/music_loader.gd" id="4_e0lev"]
-[ext_resource type="AudioStream" uid="uid://cn8wl3s6dj7g8" path="res://stages/world_1/music/apoplexy.mo3" id="5_br37x"]
+[ext_resource type="AudioStream" uid="uid://18q8jewhyks4" path="res://stages/world_1/music/military.it" id="4_sssj2"]
 [ext_resource type="PackedScene" uid="uid://1do11cr84k7y" path="res://engine/objects/players/player.tscn" id="5_sssj2"]
-[ext_resource type="Script" uid="uid://bhycqbfutplh0" path="res://engine/objects/players/player.gd" id="6_8labc"]
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="7_n04hj"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="8_h0ikb"]
 [ext_resource type="Script" uid="uid://dc824j5folagw" path="res://engine/objects/players/player_camera_autoscroll.gd" id="8_sssj2"]
-[ext_resource type="Script" uid="uid://dlpraskuccn72" path="res://engine/components/cam_area/cam_area.gd" id="9_poq26"]
+[ext_resource type="TileSet" uid="uid://jug0pn37ka10" path="res://graphics/retro_tiles/retro_tileset_overworld.tres" id="9_8labc"]
 [ext_resource type="PackedScene" uid="uid://0s1sj8ke5lyv" path="res://engine/objects/platform/platform_path_tank_floor.tscn" id="10_8labc"]
 [ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_206rg"]
-[ext_resource type="TileSet" uid="uid://dsqboambcjuek" path="res://engine/tilesets/tanks/tanks_ground.tres" id="11_n04hj"]
-[ext_resource type="Script" uid="uid://b8yydtvt64i62" path="res://engine/components/hud/hud.gd" id="12_megjd"]
+[ext_resource type="Script" uid="uid://0h3x5dwndovw" path="res://engine/scripts/nodes/effects/quality_visible.gd" id="13_hmsu6"]
 [ext_resource type="TileSet" uid="uid://d3m3fp7ol75yn" path="res://engine/tilesets/tanks/tanks.tres" id="14_h0ikb"]
+[ext_resource type="Material" uid="uid://csursv0gnjouq" path="res://graphics/materials/fog1-2.tres" id="14_n04hj"]
+[ext_resource type="PackedScene" uid="uid://cego6fro2o3pg" path="res://custom_objects/bomb_launcher/bomb_launcher_right.tscn" id="15_h0ikb"]
+[ext_resource type="PackedScene" uid="uid://dty7hkbg5qsn2" path="res://custom_objects/bomb_launcher/bomb_launcher_base.tscn" id="16_poq26"]
+[ext_resource type="PackedScene" uid="uid://crb8jkwa0r1dl" path="res://engine/objects/enemies/spinies/spiny_iron.tscn" id="17_8labc"]
 [ext_resource type="PackedScene" uid="uid://bvolo50530iv7" path="res://engine/objects/enemies/bullet_bill/launcher/bullet_launcher.tscn" id="17_n04hj"]
 [ext_resource type="FontFile" uid="uid://b1pi0t5byork2" path="res://engine/components/hud/hud_font.fnt" id="17_ytn4e"]
 [ext_resource type="PackedScene" uid="uid://bkaivnr6tufb" path="res://engine/objects/enemies/bullet_bill/launcher/bullet_launcher_base.tscn" id="18_h0ikb"]
-[ext_resource type="PackedScene" uid="uid://s1e7n1cfnhy8" path="res://engine/objects/enemies/flameball_launcher/flameball_launcher.tscn" id="19_h0ikb"]
 [ext_resource type="PackedScene" uid="uid://boprmwc4aw1lr" path="res://engine/objects/bumping_blocks/question_block/templates/gray/Gray Coin Question Block.tscn" id="20_megjd"]
+[ext_resource type="PackedScene" uid="uid://c01ch0efntxqn" path="res://custom_objects/bomb_launcher/bomb_launcher_left.tscn" id="20_rd70p"]
 [ext_resource type="PackedScene" uid="uid://b71msw28e37a" path="res://engine/objects/powerups/red_mushroom/red_mushroom.tscn" id="21_5gtrk"]
-[ext_resource type="PackedScene" uid="uid://bsdcxwngf5hru" path="res://engine/objects/powerups/fire_flower/fire_flower.tscn" id="22_44cqq"]
+[ext_resource type="PackedScene" uid="uid://cukm2rkdye2sc" path="res://engine/objects/enemies/bullet_bill/launcher/missile_bullet_launcher.tscn" id="22_hmsu6"]
+[ext_resource type="PackedScene" uid="uid://dvmhwh1khygq6" path="res://engine/objects/bumping_blocks/brick/brick_gray.tscn" id="23_gshsv"]
 [ext_resource type="Script" uid="uid://chvjy6okoognf" path="res://engine/objects/powerups/instance_powerup.gd" id="23_k40je"]
-[ext_resource type="PackedScene" uid="uid://0ugpa0ybv34g" path="res://engine/objects/enemies/rotos/roto_center.tscn" id="24_k40je"]
-[ext_resource type="PackedScene" uid="uid://cforx4e0v73a7" path="res://engine/objects/enemies/rotos/roto_red.tscn" id="25_xe61n"]
 [ext_resource type="PackedScene" uid="uid://bcgt87mbq40gx" path="res://engine/objects/enemies/thwomp/thwomp.tscn" id="26_c6fwo"]
-[ext_resource type="PackedScene" uid="uid://dp2mvur34jdbv" path="res://engine/objects/enemies/paratroopas/paratroopa_green.tscn" id="27_xe61n"]
+[ext_resource type="PackedScene" uid="uid://o3k018cbex8g" path="res://engine/objects/powerups/green_lui/green_lui.tscn" id="26_ytn4e"]
 [ext_resource type="PackedScene" uid="uid://cjroicsm5yiy6" path="res://engine/objects/enemies/spikeball_launcher/spikeball_launcher.tscn" id="28_c6fwo"]
-[ext_resource type="PackedScene" uid="uid://4qxipf3cl4td" path="res://engine/tilesets/tanks/scenes/tank_spike/tank_spike.tscn" id="30_gshsv"]
-[ext_resource type="PackedScene" uid="uid://oja3uy1y4hpl" path="res://engine/objects/enemies/piranha_plants/piranha_pink.tscn" id="30_hmsu6"]
-[ext_resource type="PackedScene" uid="uid://dh4kf1w7jyseo" path="res://engine/objects/warps/pipe_in.tscn" id="31_gshsv"]
+[ext_resource type="PackedScene" uid="uid://buhj2gmfji4vf" path="res://custom_objects/coin_offset.tscn" id="28_feyg6"]
+[ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="29_78cv8"]
 
 [sub_resource type="Curve2D" id="Curve2D_poq26"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 320, 240, 0, 0, 0, 0, 2880, 240)
+"points": PackedVector2Array(0, 0, 0, 0, 320, 240, 0, 0, 0, 0, 5000, 240)
 }
 point_count = 2
 
-[sub_resource type="Gradient" id="Gradient_poq26"]
-colors = PackedColorArray(0.03137255, 0, 0, 1, 0.15686275, 0.15686275, 0.15686275, 1)
+[sub_resource type="Gradient" id="Gradient_4mqjo"]
+offsets = PackedFloat32Array(0, 0.99698794)
+colors = PackedColorArray(0.08601073, 0.11261054, 0.3753505, 1, 0.69757646, 0.69757813, 0.6975777, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_xrivr"]
-gradient = SubResource("Gradient_poq26")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jsjv4"]
+gradient = SubResource("Gradient_4mqjo")
 width = 640
 height = 480
 fill_to = Vector2(0, 1)
 
-[sub_resource type="Resource" id="Resource_xe61n"]
+[sub_resource type="Resource" id="Resource_gshsv"]
 resource_local_to_scene = true
 script = ExtResource("23_k40je")
 creation_fallback_node = ExtResource("21_5gtrk")
-creation_nodepack = ExtResource("22_44cqq")
+creation_nodepack = ExtResource("26_ytn4e")
 trans_inheritances = 7
 
-[sub_resource type="Resource" id="Resource_rd70p"]
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_smamy"]
+resource_name = "coins"
+scenes/1/scene = ExtResource("28_feyg6")
+scenes/2/scene = ExtResource("29_78cv8")
+
+[sub_resource type="TileSet" id="TileSet_87k04"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetScenesCollectionSource_smamy")
+
+[sub_resource type="Resource" id="Resource_ytn4e"]
 resource_local_to_scene = true
 script = ExtResource("23_k40je")
 creation_fallback_node = ExtResource("21_5gtrk")
-creation_nodepack = ExtResource("22_44cqq")
+creation_nodepack = ExtResource("26_ytn4e")
 trans_inheritances = 7
 
-[node name="LevelTanksExample" type="Node2D" unique_id=687061989]
+[node name="Level-3" type="Node2D" unique_id=687061989]
 script = ExtResource("1_ipu61")
+time = 480
 completion_music = ExtResource("2_br37x")
 jump_to_scene = "uid://dulml77f8yku5"
 metadata/_custom_type_script = "uid://dh7ob1sbo8lx7"
 
-[node name="MusicLoader" type="Node" parent="." unique_id=1674830763 instance=ExtResource("3_omobe")]
-script = ExtResource("4_e0lev")
-music = Array[Resource]([ExtResource("5_br37x")])
+[node name="MusicLoader" parent="." unique_id=1674830763 instance=ExtResource("3_omobe")]
+music = Array[Resource]([ExtResource("4_sssj2")])
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=169935397 instance=ExtResource("5_sssj2")]
+[node name="Player" parent="." unique_id=169935397 instance=ExtResource("5_sssj2")]
 position = Vector2(80, 400)
-collision_mask = 16
-slide_on_ceiling = false
-floor_max_angle = 0.837758
-floor_snap_length = 12.0
-platform_on_leave = 2
-platform_floor_layers = 4294901776
-script = ExtResource("6_8labc")
-gravity_scale = 1.0
-max_falling_speed = 500.0
 
 [node name="Path2D" type="Path2D" parent="." unique_id=14859168]
 curve = SubResource("Curve2D_poq26")
@@ -106,25 +106,32 @@ position = Vector2(0, 176)
 metadata/_edit_lock_ = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Path2D/PathFollow2D/PlatformPathTankFloor" unique_id=1791908491]
-tile_map_data = PackedByteArray("AAD1/wAAAAAAAAAAAAD1/wEAAAAAAAEAAAD1/wIAAAAAAAIAAAD2/wAAAAABAAAAAAD2/wEAAAABAAEAAAD2/wIAAAABAAIAAAD3/wAAAAABAAAAAAD3/wEAAAABAAEAAAD3/wIAAAABAAIAAAD4/wAAAAABAAAAAAD4/wEAAAABAAEAAAD4/wIAAAABAAIAAAD5/wAAAAABAAAAAAD5/wEAAAABAAEAAAD5/wIAAAABAAIAAAD6/wAAAAABAAAAAAD6/wEAAAABAAEAAAD6/wIAAAABAAIAAAD7/wAAAAABAAAAAAD7/wEAAAABAAEAAAD7/wIAAAABAAIAAAD8/wAAAAABAAAAAAD8/wEAAAABAAEAAAD8/wIAAAABAAIAAAD9/wAAAAABAAAAAAD9/wEAAAABAAEAAAD9/wIAAAABAAIAAAD+/wAAAAABAAAAAAD+/wEAAAABAAEAAAD+/wIAAAABAAIAAAD//wAAAAABAAAAAAD//wEAAAABAAEAAAD//wIAAAABAAIAAAAAAAAAAAABAAAAAAAAAAEAAAABAAEAAAAAAAIAAAABAAIAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAIAAAACAAAAAAABAAAAAAACAAEAAAABAAEAAAACAAIAAAABAAIAAAADAAAAAAABAAAAAAADAAEAAAABAAEAAAADAAIAAAABAAIAAAAEAAAAAAABAAAAAAAEAAEAAAABAAEAAAAEAAIAAAABAAIAAAAFAAAAAAABAAAAAAAFAAEAAAABAAEAAAAFAAIAAAABAAIAAAAGAAAAAAABAAAAAAAGAAEAAAABAAEAAAAGAAIAAAABAAIAAAAHAAAAAAABAAAAAAAHAAEAAAABAAEAAAAHAAIAAAABAAIAAAAIAAAAAAABAAAAAAAIAAEAAAABAAEAAAAIAAIAAAABAAIAAAAJAAAAAAABAAAAAAAJAAEAAAABAAEAAAAJAAIAAAABAAIAAAAKAAAAAAACAAAAAAAKAAEAAAACAAEAAAAKAAIAAAACAAIAAAA=")
-tile_set = ExtResource("11_n04hj")
+tile_map_data = PackedByteArray("AAD1/wAAAAAAAAAAAAD1/wEAAAAAAAEAAAD1/wIAAAAAAAIAAAD2/wAAAAABAAAAAAD2/wEAAAABAAEAAAD2/wIAAAABAAIAAAD3/wAAAAABAAAAAAD3/wEAAAABAAEAAAD3/wIAAAABAAIAAAD4/wAAAAABAAAAAAD4/wEAAAABAAEAAAD4/wIAAAABAAIAAAD5/wAAAAABAAAAAAD5/wEAAAABAAEAAAD5/wIAAAABAAIAAAD6/wAAAAABAAAAAAD6/wEAAAABAAEAAAD6/wIAAAABAAIAAAD7/wAAAAABAAAAAAD7/wEAAAABAAEAAAD7/wIAAAABAAIAAAD8/wAAAAABAAAAAAD8/wEAAAABAAEAAAD8/wIAAAABAAIAAAD9/wAAAAABAAAAAAD9/wEAAAABAAEAAAD9/wIAAAABAAIAAAD+/wAAAAABAAAAAAD+/wEAAAABAAEAAAD+/wIAAAABAAIAAAD//wAAAAABAAAAAAD//wEAAAABAAEAAAD//wIAAAABAAIAAAAAAAAAAAABAAAAAAAAAAEAAAABAAEAAAAAAAIAAAABAAIAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAIAAAACAAAAAAABAAAAAAACAAEAAAABAAEAAAACAAIAAAABAAIAAAADAAAAAAABAAAAAAADAAEAAAABAAEAAAADAAIAAAABAAIAAAAEAAAAAAABAAAAAAAEAAEAAAABAAEAAAAEAAIAAAABAAIAAAAFAAAAAAABAAAAAAAFAAEAAAABAAEAAAAFAAIAAAABAAIAAAAGAAAAAAABAAAAAAAGAAEAAAABAAEAAAAGAAIAAAABAAIAAAAHAAAAAAABAAAAAAAHAAEAAAABAAEAAAAHAAIAAAABAAIAAAAIAAAAAAABAAAAAAAIAAEAAAABAAEAAAAIAAIAAAABAAIAAAAJAAAAAAABAAAAAAAJAAEAAAABAAEAAAAJAAIAAAABAAIAAAAKAAAAAAACAAAAAAAKAAEAAAACAAEAAAAKAAIAAAACAAIAAAD5//b/BgAAAAAACAD///n/BgAAAAAACAAGAPX/BgAAAAAACAD3////BgAAAAAABwD8////BAAAAAAAAAD9////BAABAAAAAAD+////BAACAAAAAAAFAP//BAAAAAAAAAAGAP//BAABAAAAAAAHAP//BAACAAAAAAAAAP//BAADAAAAAAAIAP//BAADAAAAAAACAP//BgAAAAAAAgD/////BgAAAAAAAQA=")
+tile_set = ExtResource("9_8labc")
 collision_enabled = false
 navigation_enabled = false
 
-[node name="CameraArea" type="Control" parent="." unique_id=1790766850 instance=ExtResource("8_h0ikb")]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 3200.0
+[node name="CameraArea" parent="." unique_id=1790766850 instance=ExtResource("8_h0ikb")]
+offset_right = 6737.0
 offset_bottom = 480.0
-script = ExtResource("9_poq26")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=582670371]
-tile_map_data = PackedByteArray("AAACAA0AAAAAAAAAAAAWAAwAAwAAAAAAAgAXAAwAAwAAAAAAAQAYAAwAAwAAAAAAAQAZAAwAAwAAAAAAAQAaAAwAAwAAAAAAAQAbAAwAAwAAAAAAAwAWAAsAAgAAAAEAAAAXAAsAAgACAAEAAAAYAAsAAgACAAEAAAAZAAsAAgACAAEAAAAaAAsAAgACAAEAAAAbAAsAAgADAAEAAAAZAAoAAgAAAAEAAAAaAAoAAgADAAEAAAAYAAoAAgABAAAAAAAfAAsAAgAAAAEAAAAgAAsAAgACAAEAAAAhAAsAAgACAAEAAAAiAAsAAgACAAEAAAAjAAsAAgACAAEAAAAkAAsAAgADAAEAAAAiAAoAAgAFAAEAAAAjAAoAAgAFAAEAAAAiAAkAAgAAAAEAAAAjAAkAAgADAAEAAAAgAAwAAwAAAAAAAQAhAAwAAwAAAAAAAQAiAAwAAwAAAAAAAQAjAAwAAwAAAAAAAQAfAAwAAwAAAAAAAgAkAAwAAwAAAAAAAwAmAAgAAgAEAAEAAAAoAAgAAgAEAAEAAAAsAAoAAgABAAEAAAAtAAoAAgADAAEAAAAxAAoAAgABAAEAAAAyAAoAAgADAAEAAAArAAsAAgAAAAEAAAAsAAsAAgACAAEAAAAtAAsAAgACAAEAAAAuAAsAAgACAAEAAAAvAAsAAgACAAEAAAAwAAsAAgACAAEAAAAxAAsAAgACAAEAAAAyAAsAAgADAAEAAAA4AAoAAgACAAEAAAA5AAoAAgACAAEAAAA6AAoAAgACAAEAAAA7AAoAAgACAAEAAAA8AAoAAgADAAEAAAA3AAoAAgAAAAEAAAA2AAsAAgAAAAEAAAA3AAsAAgACAAEAAAA4AAsAAgACAAEAAAA5AAsAAgACAAEAAAA6AAsAAgACAAEAAAA7AAsAAgACAAEAAAA8AAsAAgADAAEAAAA8AAwAAwAAAAAAAwAyAAwAAwAAAAAAAwArAAwAAwAAAAAAAgA2AAwAAwAAAAAAAgAsAAwAAwAAAAAAAQAtAAwAAwAAAAAAAQAuAAwAAwAAAAAAAQAvAAwAAwAAAAAAAQAwAAwAAwAAAAAAAQAxAAwAAwAAAAAAAQA3AAwAAwAAAAAAAQA4AAwAAwAAAAAAAQA5AAwAAwAAAAAAAQA6AAwAAwAAAAAAAQA7AAwAAwAAAAAAAQA7AAkAAgABAAEAAAA8AAkAAgADAAEAAABEAAEAAgABAAEAAABFAAEAAgACAAEAAABGAAEAAgACAAEAAABHAAEAAgACAAEAAABIAAEAAgACAAEAAABJAAEAAgACAAEAAABKAAEAAgACAAEAAABLAAEAAgACAAEAAABMAAEAAgACAAEAAABNAAEAAgACAAEAAABOAAEAAgADAAEAAABFAAMABQAAAAEAAABFAAQABQAAAAIAAABGAAMABQABAAEAAABGAAQABQABAAIAAABFAAIABQAAAAEAAABGAAIABQABAAEAAABIAAsAAgACAAEAAABJAAsAAgACAAEAAABHAAsAAgAAAAEAAABKAAsAAgACAAEAAABIAAwAAwAAAAAAAQBJAAwAAwAAAAAAAwBHAAwAAwAAAAAAAgBMAAsAAgACAAEAAABMAAwAAwAAAAAAAgBNAAsAAgACAAEAAABNAAwAAwAAAAAAAQBOAAsAAgADAAEAAABOAAwAAwAAAAAAAwBLAAsAAgACAAEAAABUAAsAAgAAAAEAAABVAAsAAgACAAEAAABWAAsAAgACAAAAAABXAAsAAgACAAEAAABYAAsAAgACAAEAAABZAAsAAgACAAAAAABaAAsAAgACAAEAAABbAAsAAgACAAEAAABcAAsAAgACAAEAAABdAAsAAgACAAEAAABeAAsAAgACAAEAAABfAAsAAgACAAEAAABgAAsAAgACAAEAAABhAAsAAgACAAEAAABiAAsAAgACAAEAAABjAAsAAgACAAEAAABkAAsAAgACAAEAAABlAAsAAgACAAEAAABmAAsAAgACAAEAAABnAAsAAgACAAEAAABVAAwAAwAAAAAAAQBWAAwAAwAAAAAAAQBXAAwAAwAAAAAAAQBYAAwAAwAAAAAAAwBUAAwAAwAAAAAAAgBhAAwAAwAAAAAAAgBiAAwAAwAAAAAAAQBjAAwAAwAAAAAAAQBkAAwAAwAAAAAAAQBpAPz/AgACAAEAAABpAP3/AgACAAEAAABpAP7/AgACAAEAAABpAP//AgACAAEAAABpAAAAAgACAAEAAABpAAEAAgACAAEAAABpAAIAAgACAAEAAABpAAMAAgACAAEAAABpAAQAAgACAAEAAABpAAUAAgACAAEAAABpAAYAAgACAAEAAABpAAcAAgACAAEAAABpAAgAAgACAAEAAABpAAkAAgACAAEAAABpAAoAAgACAAEAAABoAAsAAgACAAEAAABpAAsAAgACAAEAAABYAAoAAgABAAEAAABZAAoAAgACAAEAAABaAAoAAgACAAEAAABbAAoAAgACAAEAAABcAAoAAgACAAEAAABdAAoAAgACAAEAAABgAAoAAgACAAEAAABfAAoAAgACAAEAAABeAAoAAgACAAEAAABZAAkAAgABAAEAAABZAAgAAgABAAEAAABaAAcAAgABAAEAAABaAAYAAgABAAEAAABfAAYAAgADAAEAAABfAAcAAgADAAEAAABgAAgAAgADAAEAAABgAAkAAgADAAEAAABhAAoAAgADAAEAAABfAAkAAgACAAEAAABeAAkAAgACAAEAAABdAAkAAgACAAEAAABcAAkAAgACAAEAAABbAAkAAgACAAEAAABaAAkAAgACAAEAAABaAAgAAgACAAEAAABbAAgAAgACAAEAAABcAAgAAgACAAEAAABdAAgAAgACAAEAAABeAAgAAgACAAEAAABfAAgAAgACAAEAAABeAAcAAgACAAEAAABdAAcAAgACAAEAAABcAAcAAgACAAEAAABbAAcAAgACAAEAAABbAAYAAgACAAEAAABcAAYAAgACAAEAAABdAAYAAgACAAEAAABeAAYAAgACAAEAAABcAAQABAAAAAAAAABcAAUABAAAAAEAAABdAAQABAABAAAAAABdAAUABAABAAEAAAA=")
+tile_map_data = PackedByteArray("AAACAA0AAAAAAAAAAAAZAAsAAQABAAEAAAAaAAsAAQAFAAEAAAAbAAsAAQAFAAEAAAAcAAsAAQADAAIAAAAdAAsAAQAHAAEAAAAbAAoABgAEAAAAAAAZAAwAAwAAAAAAAgAaAAwAAwAAAAAAAQAbAAwAAwAAAAAAAQAcAAwAAwAAAAAAAQAdAAwAAwAAAAAAAwAiAAwAAwAAAAAAAgAkAAwAAwAAAAAAAQAjAAwAAwAAAAAAAQAiAAsAAQABAAEAAAAjAAsAAQAFAAEAAAAkAAsAAQAGAAEAAAAlAAsAAQAFAAEAAAAmAAsAAQAGAAEAAAAnAAsAAQADAAAAAAAoAAsAAQADAAAAAAApAAsAAQADAAAAAAAnAAoAAQAMAAAAAAAoAAoAAQANAAAAAAAoAAkAAQALAAQAAAAoAAgAAQALAAEAAAApAAoAAQALAAQAAAApAAkAAQALAAEAAAAlAAoAAgABAAAAAAAqAAsAAQAFAAEAAAArAAsAAQAGAAEAAAAsAAsAAQAFAAEAAAAtAAsAAQAGAAEAAAAvAAsAAQAGAAAAAAAwAAsAAQAHAAEAAAAuAAsAAQAFAAAAAAAvAAwAAwAAAAAAAQAuAAwAAwAAAAAAAQAtAAwAAwAAAAAAAgAlAAwAAwAAAAAAAwAwAAwAAwAAAAAAAwAwAAoAAQAGAAMAAAAxAAoAAQAHAAMAAAA5AAsAAQABAAEAAAA6AAsAAQAFAAEAAAA7AAsAAQAFAAEAAAA8AAsAAQAFAAEAAAA9AAsAAQADAAAAAAA+AAsAAQAEAAAAAAA/AAsAAQADAAAAAABAAAsAAQAEAAAAAABBAAsAAQAFAAEAAABCAAsAAQAFAAEAAABFAAsAAQAGAAEAAABGAAsAAQAHAAEAAABDAAsAAQAFAAEAAABEAAsAAQAFAAEAAAA5AAwAAwAAAAAAAgA6AAwAAwAAAAAAAQA7AAwAAwAAAAAAAQA8AAwAAwAAAAAAAQA9AAwAAwAAAAAAAQA+AAwAAwAAAAAAAQA/AAwAAwAAAAAAAQBAAAwAAwAAAAAAAQBBAAwAAwAAAAAAAQBCAAwAAwAAAAAAAQBDAAwAAwAAAAAAAQBEAAwAAwAAAAAAAQBFAAwAAwAAAAAAAQBGAAwAAwAAAAAAAwBFAAkAAQAMAAEAAABGAAkAAQANAAEAAABFAAoAAQAMAAQAAABGAAoAAQANAAQAAAA7AAAAAQAKAAUAAAA7AAEAAQAKAAYAAAA8AAAAAQALAAUAAAA8AAEAAQALAAYAAAA9AAAAAQAMAAUAAAA9AAEAAQAMAAYAAAA+AAAAAQANAAUAAAA+AAEAAQANAAYAAAA/AAAAAQAKAAUAAAA/AAEAAQAKAAYAAABAAAAAAQALAAUAAABAAAEAAQALAAYAAABBAAAAAQAMAAUAAABBAAEAAQAMAAYAAABCAAAAAQANAAUAAABCAAEAAQANAAYAAAA8AAIABgAAAAAAAAA9AAMABgABAAAAAAA8AAQABgAAAAAAAAA9AAUABgABAAAAAAA8AAYABgAAAAAAAAA9AAcABgABAAAAAAA8AAoABgAAAAAAAABBAAIABgACAAAAAABAAAMABgABAAAAAABBAAQABgACAAAAAABAAAUABgABAAAAAABBAAYABgACAAAAAABAAAcABgABAAAAAABBAAoABgACAAAAAABAAAoABgABAAAAAAA/AAoABgABAAAAAAA+AAoABgABAAAAAAA9AAoABgABAAAAAAA8AAkABgAAAAAAAAA8AAgABgAAAAAAAAA8AAcABgAAAAAAAAA8AAUABgAAAAAAAAA8AAMABgAAAAAAAABBAAkABgACAAAAAABBAAgABgACAAAAAABBAAcABgACAAAAAABBAAUABgACAAAAAABBAAMABgACAAAAAAA9AAkABgABAAAAAAA9AAgABgABAAAAAAA9AAYABgABAAAAAAA9AAQABgABAAAAAAA9AAIABgABAAAAAAA+AAIABgABAAAAAAA/AAIABgABAAAAAABAAAIABgABAAAAAABAAAQABgABAAAAAABAAAYABgABAAAAAABAAAgABgABAAAAAABAAAkABgABAAAAAAA/AAkABgABAAAAAAA+AAkABgABAAAAAAA+AAgABgABAAAAAAA+AAcABgABAAAAAAA+AAYABgABAAAAAAA+AAUABgABAAAAAAA+AAQABgABAAAAAAA+AAMABgABAAAAAAA/AAMABgABAAAAAAA/AAQABgABAAAAAAA/AAUABgABAAAAAAA/AAYABgABAAAAAAA/AAcABgABAAAAAAA/AAgABgABAAAAAAA7AP//AQALAAAAAAA7AP7/AQALAAAAAAA7AP3/AQALAAAAAAA7APz/AQALAAAAAAA7APv/AQALAAAAAAA7APr/AQALAAAAAAA7APn/AQALAAAAAABCAP//AQALAAAAAABCAP7/AQALAAAAAABCAP3/AQALAAAAAABCAPz/AQALAAAAAABCAPv/AQALAAAAAABCAPr/AQALAAAAAABCAPn/AQALAAAAAABRAAwAAwAAAAAAAgBTAAwAAwAAAAAAAQBSAAwAAwAAAAAAAQBUAAwAAwAAAAAAAQBVAAwAAwAAAAAAAwBRAAsAAQAEAAMAAABSAAsAAQAFAAEAAABTAAsAAQAGAAEAAABVAAsAAQAKAAQAAABUAAsAAQAFAAEAAABWAAsAAAAAAAQAAABXAAsAAAAAAAQAAABYAAsAAAAAAAQAAABbAAsAAAAAAAQAAABcAAsAAAAAAAQAAABdAAsAAAAAAAQAAABZAAsAAQAGAAMAAABaAAsAAQAHAAMAAABeAAsAAQAJAAQAAABfAAsAAQAFAAEAAABgAAsAAQAGAAEAAABhAAsAAQAHAAAAAABiAAsAAQAHAAAAAABjAAsAAQAFAAEAAABkAAsAAQAGAAEAAABlAAsAAQAHAAEAAABkAAwAAwAAAAAAAQBfAAwAAwAAAAAAAQBeAAwAAwAAAAAAAgBjAAwAAwAAAAAAAgBlAAwAAwAAAAAAAwBgAAwAAwAAAAAAAwBgAAoAAQABAAEAAABhAAkAAQAEAAEAAABiAAcAAQAEAAEAAABjAAcAAQAFAAEAAABkAAcAAQAGAAEAAABjAAgAAQAAAAIAAABjAAkAAQAAAAMAAABkAAgAAQABAAIAAABkAAkAAQABAAMAAABiAAgAAQAIAAEAAABlAAgAAQAIAAEAAABlAAcAAQAHAAEAAABiAAkAAQAHAAEAAABlAAkAAQAKAAEAAABlAAoAAQALAAQAAABhAAoAAQAFAAEAAABiAAoAAQAGAAEAAABjAAoAAQAGAAEAAABkAAoAAQAHAAEAAABiAAYABgAAAAAAAABiAAUABgAAAAAAAABiAAQABgAAAAAAAABiAAMABgAAAAAAAABiAAIABgAAAAAAAABlAAYABgACAAAAAABlAAUABgACAAAAAABlAAQABgACAAAAAABlAAMABgACAAAAAABlAAIABgACAAAAAABjAAYABgABAAAAAABjAAUABgABAAAAAABjAAQABgABAAAAAABjAAMABgABAAAAAABjAAIABgABAAAAAABkAAIABgABAAAAAABkAAMABgABAAAAAABkAAQABgABAAAAAABkAAUABgABAAAAAABkAAYABgABAAAAAABhAAAAAQADAAYAAABmAAAAAQAEAAYAAABiAAAAAQAFAAEAAABjAAAAAQAGAAEAAABkAAAAAQAFAAEAAABlAAAAAQAGAAEAAABjAAEAAQAFAAEAAABkAAEAAQAGAAEAAABiAAEAAQAEAAEAAABlAAEAAQAHAAEAAABhAP//AQAIAAEAAABhAP7/AQAIAAEAAABhAP3/AQAIAAEAAABhAPz/AQAIAAEAAABhAPv/AQAIAAEAAABhAPr/AQAIAAEAAABmAP//AQAIAAEAAABmAP7/AQAIAAEAAABmAP3/AQAIAAEAAABmAPz/AQAIAAEAAABmAPv/AQAIAAEAAABmAPr/AQAIAAEAAABvAAwAAwAAAAAAAgBwAAwAAwAAAAAAAQBxAAwAAwAAAAAAAQByAAwAAwAAAAAAAQBzAAwAAwAAAAAAAQB0AAwAAwAAAAAAAwBvAAsAAQABAAEAAABxAAkAAQABAAEAAABzAAkAAQAHAAEAAAByAAkAAQAGAAEAAABwAAsAAQAGAAEAAABzAAsAAQACAAAAAAByAAsAAQABAAAAAAB0AAsAAQAHAAEAAABxAAsAAQAFAAEAAABxAAoAAQAEAAEAAABzAAoAAQADAAMAAAByAAoAAQADAAIAAABpAAgAAQAEAAEAAABqAAgAAQAFAAEAAABrAAgAAQAHAAEAAABSAAoAAQANAAAAAABRAAoAAQAMAAAAAAA=")
 tile_set = ExtResource("14_h0ikb")
 navigation_enabled = false
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=469826780 instance=ExtResource("11_206rg")]
-script = ExtResource("12_megjd")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1906012436]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=696722128]
+material = ExtResource("14_n04hj")
+offset_right = 800.0
+offset_bottom = 600.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("13_hmsu6")
+medium = true
+
+[node name="HUD" parent="." unique_id=469826780 instance=ExtResource("11_206rg")]
 
 [node name="WorldLabel" type="Label" parent="HUD" unique_id=1159833133]
 anchors_preset = -1
@@ -138,122 +145,93 @@ grow_horizontal = 2
 pivot_offset = Vector2(0, 9)
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("17_ytn4e")
-text = "WORLD
-1-3"
+text = "LEVEL
+-3
+ARTILLERY
+TANKS!"
 horizontal_alignment = 1
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=31303052]
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground" unique_id=1901760493]
-position = Vector2(320, 240)
-texture = SubResource("GradientTexture2D_xrivr")
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground" unique_id=2084113950]
+texture = SubResource("GradientTexture2D_jsjv4")
+centered = false
 
-[node name="BulletLauncher" parent="." unique_id=1903534907 instance=ExtResource("17_n04hj")]
-position = Vector2(848, 304)
+[node name="Enemies" type="Node2D" parent="." unique_id=1322493318]
 
-[node name="BulletBillBase" parent="." unique_id=991781428 instance=ExtResource("18_h0ikb")]
-offset_left = 832.0
-offset_top = 287.84
-offset_right = 864.0
-offset_bottom = 319.84
+[node name="BulletLauncher" parent="Enemies" unique_id=1988053970 instance=ExtResource("15_h0ikb")]
+position = Vector2(1326, 241)
+first_shooting_delay = 3.0
+shooting_force_no_shoot_on_wrong_dir = false
 
-[node name="BulletLauncher2" parent="." unique_id=280968296 instance=ExtResource("17_n04hj")]
-position = Vector2(1136, 240)
-
-[node name="BulletBillBase2" parent="." unique_id=402575407 instance=ExtResource("18_h0ikb")]
-offset_left = 1120.0
+[node name="BulletBillBase" parent="Enemies" unique_id=1876493019 instance=ExtResource("16_poq26")]
+offset_left = 1312.0
 offset_top = 224.0
-offset_right = 1152.0
+offset_right = 1344.0
 offset_bottom = 288.0
 
-[node name="FlameballLauncher" parent="." unique_id=698528653 instance=ExtResource("19_h0ikb")]
-offset_left = 1024.0
-offset_top = 320.0
-offset_right = 1088.0
-offset_bottom = 352.0
+[node name="SpinyIron" parent="Enemies" unique_id=1611579278 instance=ExtResource("17_8labc")]
+position = Vector2(1999, 336)
 
-[node name="BulletBillBase3" parent="." unique_id=753148869 instance=ExtResource("18_h0ikb")]
-offset_left = 1024.0
-offset_top = 320.0
-offset_right = 1056.0
-offset_bottom = 352.0
+[node name="SpinyIron2" parent="Enemies" unique_id=1732332475 instance=ExtResource("17_8labc")]
+position = Vector2(2065, 336)
 
-[node name="FlameballLauncher2" parent="." unique_id=1256884537 instance=ExtResource("19_h0ikb")]
-offset_left = 1424.0
-offset_top = 256.00015
-offset_right = 1488.0
-offset_bottom = 288.00015
-rotation = 2.0943952
-scale = Vector2(1, -1)
-initial_interval = 2.0
+[node name="BulletLauncher2" parent="Enemies" unique_id=1903534907 instance=ExtResource("17_n04hj")]
+position = Vector2(2256, 272)
 
-[node name="BulletBillBase4" parent="." unique_id=1725428579 instance=ExtResource("18_h0ikb")]
-offset_left = 1424.0001
-offset_top = 256.0
-offset_right = 1456.0001
+[node name="BulletBillBase" parent="Enemies/BulletLauncher2" unique_id=991781428 instance=ExtResource("18_h0ikb")]
+offset_top = -16.16
+offset_bottom = 15.84
+
+[node name="BulletLauncherLeft" parent="Enemies" unique_id=563862652 instance=ExtResource("20_rd70p")]
+position = Vector2(2609, 242.00012)
+
+[node name="BulletBillBase2" parent="Enemies" unique_id=2062983963 instance=ExtResource("16_poq26")]
+offset_left = 2592.0
+offset_top = 225.0
+offset_right = 2624.0
 offset_bottom = 320.0
 
-[node name="QuestionBlock" parent="." unique_id=1851736272 instance=ExtResource("20_megjd")]
-position = Vector2(1264, 272)
-result = SubResource("Resource_xe61n")
+[node name="SpikeballLauncher" parent="Enemies" unique_id=189942596 instance=ExtResource("28_c6fwo")]
+position = Vector2(2880, 336)
 
-[node name="QuestionBlock2" parent="." unique_id=1114274033 instance=ExtResource("20_megjd")]
-position = Vector2(2288, 144)
-result = SubResource("Resource_rd70p")
-initially_visible_and_solid = false
+[node name="SpinyIron3" parent="Enemies" unique_id=1539460795 instance=ExtResource("17_8labc")]
+position = Vector2(2736, 336)
 
-[node name="RotoCenter" parent="." unique_id=1533555563 instance=ExtResource("24_k40je")]
-position = Vector2(1600, 336)
+[node name="SpinyIron4" parent="Enemies" unique_id=2049588324 instance=ExtResource("17_8labc")]
+position = Vector2(2832, 336)
 
-[node name="RotoRed" parent="RotoCenter" unique_id=1280988665 instance=ExtResource("25_xe61n")]
-position = Vector2(0, 150)
-phase = 90.0
-frequency = -250.0
+[node name="MissileBulletLauncher" parent="Enemies" unique_id=203378618 instance=ExtResource("22_hmsu6")]
+position = Vector2(3201, 208)
 
-[node name="RotoCenter2" parent="." unique_id=2086538549 instance=ExtResource("24_k40je")]
-position = Vector2(1920, 304)
+[node name="BulletBillBase" parent="Enemies/MissileBulletLauncher" unique_id=244495331 instance=ExtResource("18_h0ikb")]
+offset_top = -16.16
+offset_bottom = 15.84
 
-[node name="RotoRed" parent="RotoCenter2" unique_id=1932908900 instance=ExtResource("25_xe61n")]
-position = Vector2(0, 150)
-amplitude_enable = true
-amplitude_changing_speed = 333.0
-phase = 90.0
-frequency = -50.0
+[node name="Thwomp" parent="Enemies" unique_id=154382084 instance=ExtResource("26_c6fwo")]
+position = Vector2(3678, 34)
 
-[node name="Thwomp" parent="." unique_id=154382084 instance=ExtResource("26_c6fwo")]
-position = Vector2(1856, 32)
+[node name="Bonus" type="Node2D" parent="." unique_id=1904403837]
 
-[node name="KoopaParatroopaGreen" parent="." unique_id=1133360352 instance=ExtResource("27_xe61n")]
-position = Vector2(2064, 224)
-phase = 21.93135732082838
+[node name="Brick" parent="Bonus" unique_id=1881880263 instance=ExtResource("23_gshsv")]
+position = Vector2(1136, 176)
 
-[node name="SpikeballLauncher" parent="." unique_id=189942596 instance=ExtResource("28_c6fwo")]
-position = Vector2(2464, 80)
-rotation = 3.1415882
-spikeball_velocity_min = Vector2(-100, -15)
-spikeball_velocity_max = Vector2(100, -50)
+[node name="Brick2" parent="Bonus" unique_id=1240461386 instance=ExtResource("23_gshsv")]
+position = Vector2(1168, 176)
 
-[node name="SpikeballLauncher2" parent="." unique_id=1578967496 instance=ExtResource("28_c6fwo")]
-position = Vector2(2336, 336)
-rotation = 6.2831764
+[node name="Brick3" parent="Bonus" unique_id=622124622 instance=ExtResource("23_gshsv")]
+position = Vector2(1232, 176)
 
-[node name="PiranhaPink" parent="." unique_id=1342841014 instance=ExtResource("30_hmsu6")]
-position = Vector2(2240, 160)
-rotation = 3.1415882
+[node name="QuestionBlock" parent="Bonus" unique_id=1851736272 instance=ExtResource("20_megjd")]
+position = Vector2(1200, 176)
+result = SubResource("Resource_gshsv")
 
-[node name="TankSpike" parent="." unique_id=1093655686 instance=ExtResource("30_gshsv")]
-position = Vector2(2800, 336)
-rotation = 1.5707941
-scale = Vector2(1, -1)
+[node name="TileMapLayer" type="TileMapLayer" parent="Bonus" unique_id=1274773672]
+tile_map_data = PackedByteArray("AABKAAYAAAAAAAAAAgBLAAYAAAAAAAAAAgBNAAYAAAAAAAAAAgBOAAYAAAAAAAAAAgBLAAcAAAAAAAAAAQBMAAcAAAAAAAAAAQBZAAUAAAAAAAAAAgBXAAMAAAAAAAAAAgBaAAUAAAAAAAAAAgBcAAMAAAAAAAAAAgA=")
+tile_set = SubResource("TileSet_87k04")
 
-[node name="TankSpike2" parent="." unique_id=1368745832 instance=ExtResource("30_gshsv")]
-position = Vector2(2768, 336)
-rotation = 1.5707941
-scale = Vector2(1, -1)
-
-[node name="PipeIn" parent="." unique_id=1607065405 instance=ExtResource("31_gshsv")]
-position = Vector2(2976, 112)
-warp_to_scene = "uid://dulml77f8yku5"
-use_blur_transition = true
+[node name="QuestionBlock2" parent="Bonus" unique_id=153788626 instance=ExtResource("20_megjd")]
+position = Vector2(3408, 272)
+result = SubResource("Resource_ytn4e")
 
 [connection signal="scroll_stopped" from="Path2D/PathFollow2D" to="TileMapLayer" method="set_process_mode" binds= [4]]

@@ -103,7 +103,9 @@ enabled=PackedStringArray("res://addons/godot-openmpt/plugin.cfg")
 [file_customization]
 
 folder_colors={
+"res://custom_objects/": "orange",
 "res://engine/": "red",
+"res://graphics/": "green",
 "res://stages/": "yellow"
 }
 
