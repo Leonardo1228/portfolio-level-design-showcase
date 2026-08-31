@@ -106,7 +106,8 @@ folder_colors={
 "res://custom_objects/": "orange",
 "res://engine/": "red",
 "res://graphics/": "green",
-"res://stages/": "yellow"
+"res://stages/": "yellow",
+"res://stages/extras/": "blue"
 }
 
 [filesystem]

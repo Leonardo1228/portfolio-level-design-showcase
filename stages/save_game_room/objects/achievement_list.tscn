@@ -9,9 +9,9 @@ script = ExtResource("1_6f7qc")
 [node name="AchievementEntry" parent="." unique_id=2001454897 instance=ExtResource("1_7at1v")]
 layout_mode = 2
 entry_name = "MAIN WORLD COMPLETED     "
-secret_id = "MAIN WORLD"
+secret_id = "MAIN WORLD COMPLETED"
 
 [node name="AchievementEntry2" parent="." unique_id=761002406 instance=ExtResource("1_7at1v")]
 layout_mode = 2
 entry_name = "ALL EXTRA LEVELS COMPLETED         "
-secret_id = "EXTRA LEVELS PROGRESS"
+secret_id = "EXTRA LEVELS COMPLETED"

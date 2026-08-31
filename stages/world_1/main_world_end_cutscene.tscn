@@ -1,0 +1,80 @@
+[gd_scene format=4 uid="uid://bq37luurgsjng"]
+
+[ext_resource type="Script" uid="uid://bwpe24nufpj37" path="res://engine/scripts/classes/level_cutscene/level_cutscene.gd" id="1_swcgc"]
+[ext_resource type="Script" uid="uid://dhugvylyq27q0" path="res://engine/scenes/castle_cutscene/scripts/w3_end_cutscene.gd" id="2_47joj"]
+[ext_resource type="Texture2D" uid="uid://cfl32xhp20q7x" path="res://engine/scenes/castle_cutscene/textures/castle_big.png" id="3_vi3sc"]
+[ext_resource type="PackedScene" uid="uid://1do11cr84k7y" path="res://engine/objects/players/player.tscn" id="4_py2hm"]
+[ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="5_wlta4"]
+[ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="6_54pgj"]
+[ext_resource type="TileSet" uid="uid://jug0pn37ka10" path="res://graphics/retro_tiles/retro_tileset_overworld.tres" id="7_lyqlg"]
+[ext_resource type="Script" uid="uid://0h3x5dwndovw" path="res://engine/scripts/nodes/effects/quality_visible.gd" id="8_8koe7"]
+[ext_resource type="PackedScene" uid="uid://ugxjxrdao5el" path="res://engine/components/hud/hud.tscn" id="11_8jg25"]
+
+[sub_resource type="Gradient" id="Gradient_pw38v"]
+offsets = PackedFloat32Array(0, 0.5993976)
+colors = PackedColorArray(0.0037122646, 0, 0.30967674, 1, 0.095741116, 0.29055956, 0.41206542, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5sgnw"]
+gradient = SubResource("Gradient_pw38v")
+width = 480
+
+[node name="CastleCutscene" type="Node2D" unique_id=183993777]
+script = ExtResource("1_swcgc")
+goto_path = "uid://gxkwsxwairg4"
+fade_out_time = 0.02
+lighting_force_hide_on_start = false
+
+[node name="CutsceneLogic" type="Node" parent="." unique_id=1557872439]
+script = ExtResource("2_47joj")
+
+[node name="Castle" type="Node2D" parent="." unique_id=2032206321]
+
+[node name="CastleNotBroken" type="Sprite2D" parent="Castle" unique_id=1609348060]
+position = Vector2(16, 64)
+texture = ExtResource("3_vi3sc")
+centered = false
+
+[node name="Marker2D" type="Marker2D" parent="Castle" unique_id=1452102565]
+position = Vector2(176, 416)
+
+[node name="Mario" parent="." unique_id=368062966 instance=ExtResource("4_py2hm")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(173, 400)
+
+[node name="PlayerCamera2D" type="Camera2D" parent="." unique_id=276062504]
+limit_left = 0
+limit_top = 0
+limit_bottom = 480
+script = ExtResource("5_wlta4")
+
+[node name="CamArea" parent="." unique_id=4055793 instance=ExtResource("6_54pgj")]
+offset_right = 640.0
+offset_bottom = 480.0
+metadata/_edit_lock_ = true
+
+[node name="Layer0" type="TileMapLayer" parent="." unique_id=2104902882]
+z_index = 4
+tile_map_data = PackedByteArray("AAATAA8AAAABAAEAAAASAA8AAAABAAIAAAARAA8AAAABAAIAAAAQAA8AAAABAAIAAAAPAA8AAAABAAIAAAAPAA4AAAABAAEAAAAPAA0AAAABAAAAAAAOAA8AAAABAAIAAAAOAA4AAAABAAEAAAAOAA0AAAABAAAAAAANAA8AAAABAAIAAAANAA4AAAABAAEAAAANAA0AAAABAAAAAAAMAA8AAAABAAIAAAAMAA4AAAABAAEAAAAMAA0AAAABAAAAAAALAA8AAAABAAIAAAALAA4AAAABAAEAAAALAA0AAAABAAAAAAAKAA8AAAABAAIAAAAKAA4AAAABAAEAAAAKAA0AAAABAAAAAAAJAA8AAAABAAIAAAAJAA4AAAABAAEAAAAJAA0AAAABAAAAAAAIAA8AAAABAAIAAAAIAA4AAAABAAEAAAAIAA0AAAABAAAAAAAHAA8AAAABAAIAAAAHAA4AAAABAAEAAAAHAA0AAAABAAAAAAAGAA8AAAABAAIAAAAGAA4AAAABAAEAAAAGAA0AAAABAAAAAAAFAA8AAAABAAIAAAAFAA4AAAABAAEAAAAEAA8AAAABAAIAAAAEAA4AAAABAAEAAAAEAA0AAAABAAAAAAADAA8AAAABAAIAAAADAA4AAAABAAEAAAADAA0AAAABAAAAAAACAA8AAAABAAIAAAACAA4AAAABAAEAAAACAA0AAAABAAAAAAABAA8AAAABAAIAAAABAA4AAAABAAEAAAABAA0AAAABAAAAAAAAAA8AAAABAAIAAAAAAA4AAAABAAEAAAAAAA0AAAABAAAAAAD//w8AAAAAAAIAAAD//w4AAAAAAAEAAAD//w0AAAAAAAAAAAAUAA8AAAABAAEAAAAFAA0AAAABAAAAAAAVAA8AAAACAAEAAAAWAAYAAQAAAAAAAAAWAAcAAQAAAAAAAAAWAAgAAQAAAAAAAAAWAAkAAQAAAAAAAAAWAAoAAQAAAAAAAAAWAAsAAQAAAAAAAAAWAAwAAQAAAAAAAAAQAA0AAAABAAAAAAAQAA4AAAABAAEAAAARAA0AAAABAAAAAAARAA4AAAABAAEAAAASAA0AAAABAAAAAAASAA4AAAABAAEAAAATAA0AAAABAAAAAAATAA4AAAABAAEAAAAUAA0AAAABAAAAAAAUAA4AAAABAAEAAAAVAA0AAAACAAAAAAAVAA4AAAACAAEAAAALAAwABAADAAAAAAATAAwABQAAAAAAAAASAAwABQAAAAAAAAARAAwABQAAAAAAAAAJAAIABgAAAAAACAAOAAUABgAAAAAACAARAAIABgAAAAAACAANAAwABgAAAAAAAwAPAAwABgAAAAAAAQA=")
+tile_set = ExtResource("7_lyqlg")
+navigation_enabled = false
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1187118973]
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground" unique_id=483279398]
+position = Vector2(640, 0)
+rotation = 1.5708
+scale = Vector2(1, 640)
+texture = SubResource("GradientTexture1D_5sgnw")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="HUD" parent="." unique_id=598807993 instance=ExtResource("11_8jg25")]
+visible = false
+
+[node name="CastleEndMarker" type="Marker2D" parent="." unique_id=668762965]
+position = Vector2(173, 416)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=603550366]
+color = Color(0.587751, 0.587751, 0.58775, 1)
+script = ExtResource("8_8koe7")
+medium = true

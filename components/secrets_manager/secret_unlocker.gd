@@ -74,3 +74,7 @@ func progress_secret(id: int = 0, replace_on_complete: bool = true) -> void:
 ## This is adding garbage to profile for "unlock_if" method to prevent unlocking some secrets during gameplay
 func add_bad_stuff_to_profile(data: String, value: bool = true) -> void:
 	ProfileManager.current_profile.data[data] = value
+
+
+func _on_level_5_level_completed() -> void:
+	pass # Replace with function body.
