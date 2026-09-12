@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="29_78cv8"]
 [ext_resource type="PackedScene" uid="uid://ltoqkqmxpt65" path="res://engine/objects/powerups/life_mushroom/life_mushroom.tscn" id="34_smamy"]
 [ext_resource type="PackedScene" uid="uid://dfm7d4qtja67b" path="res://engine/objects/core/finish_line/finish_line.tscn" id="35_d074b"]
+[ext_resource type="Texture2D" uid="uid://dcda5qmebxxtr" path="res://engine/tilesets/overworld/gfx/cloud_light_effect.png" id="36_smamy"]
 
 [sub_resource type="Curve2D" id="Curve2D_poq26"]
 _data = {
@@ -52,7 +53,7 @@ width = 640
 height = 480
 fill_to = Vector2(0, 1)
 
-[sub_resource type="Resource" id="Resource_d074b"]
+[sub_resource type="Resource" id="Resource_nypa6"]
 resource_local_to_scene = true
 script = ExtResource("23_k40je")
 creation_fallback_node = ExtResource("21_5gtrk")
@@ -68,20 +69,20 @@ scenes/2/scene = ExtResource("29_78cv8")
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetScenesCollectionSource_smamy")
 
-[sub_resource type="Resource" id="Resource_smamy"]
+[sub_resource type="Resource" id="Resource_bc7r4"]
 resource_local_to_scene = true
 script = ExtResource("23_k40je")
 creation_fallback_node = ExtResource("21_5gtrk")
 creation_nodepack = ExtResource("26_ytn4e")
 trans_inheritances = 7
 
-[sub_resource type="Resource" id="Resource_nypa6"]
+[sub_resource type="Resource" id="Resource_4f5n8"]
 resource_local_to_scene = true
 script = ExtResource("23_k40je")
 creation_nodepack = ExtResource("34_smamy")
 trans_inheritances = 7
 
-[sub_resource type="Resource" id="Resource_bc7r4"]
+[sub_resource type="Resource" id="Resource_jgvgg"]
 resource_local_to_scene = true
 script = ExtResource("23_k40je")
 creation_fallback_node = ExtResource("21_5gtrk")
@@ -396,7 +397,7 @@ position = Vector2(1232, 176)
 
 [node name="QuestionBlock" parent="Bonus" unique_id=1851736272 instance=ExtResource("20_megjd")]
 position = Vector2(1200, 176)
-result = SubResource("Resource_d074b")
+result = SubResource("Resource_nypa6")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Bonus" unique_id=1274773672]
 tile_map_data = PackedByteArray("AABKAAYAAAAAAAAAAgBLAAYAAAAAAAAAAgBNAAYAAAAAAAAAAgBOAAYAAAAAAAAAAgBLAAcAAAAAAAAAAQBMAAcAAAAAAAAAAQBZAAUAAAAAAAAAAgBaAAUAAAAAAAAAAgARAQIAAAAAAAAAAQARAQMAAAAAAAAAAQARAQQAAAAAAAAAAQAVAQIAAAAAAAAAAQAVAQMAAAAAAAAAAQAVAQQAAAAAAAAAAQD+AAIAAAAAAAAAAgD9AAIAAAAAAAAAAgD5AAIAAAAAAAAAAgD4AAIAAAAAAAAAAgC6AAQAAAAAAAAAAgC6AAMAAAAAAAAAAgC2AAQAAAAAAAAAAgC2AAMAAAAAAAAAAgBXAAMAAAAAAAAAAQBbAAMAAAAAAAAAAQCUAAQAAAAAAAAAAgCUAAMAAAAAAAAAAgCUAAIAAAAAAAAAAgA=")
@@ -404,7 +405,7 @@ tile_set = SubResource("TileSet_87k04")
 
 [node name="QuestionBlock2" parent="Bonus" unique_id=153788626 instance=ExtResource("20_megjd")]
 position = Vector2(4880, 176)
-result = SubResource("Resource_smamy")
+result = SubResource("Resource_bc7r4")
 
 [node name="Brick4" parent="Bonus" unique_id=564201849 instance=ExtResource("23_gshsv")]
 position = Vector2(4048, 208)
@@ -435,15 +436,33 @@ position = Vector2(4304, 208)
 
 [node name="QuestionBlock3" parent="Bonus" unique_id=1057396110 instance=ExtResource("20_megjd")]
 position = Vector2(4976, 176)
-result = SubResource("Resource_nypa6")
+result = SubResource("Resource_4f5n8")
 initially_visible_and_solid = false
 exists_once = true
 
 [node name="FinishLine" parent="Bonus" unique_id=633176209 instance=ExtResource("35_d074b")]
 position = Vector2(10484, 320)
 
+[node name="CloudLightEffect" type="Sprite2D" parent="Bonus/FinishLine" unique_id=1890701231]
+z_index = -1
+position = Vector2(18, -12)
+texture = ExtResource("36_smamy")
+script = ExtResource("13_hmsu6")
+
+[node name="CloudLightEffect2" type="Sprite2D" parent="Bonus/FinishLine" unique_id=338016918]
+z_index = -1
+position = Vector2(180, -264)
+texture = ExtResource("36_smamy")
+script = ExtResource("13_hmsu6")
+
+[node name="CloudLightEffect3" type="Sprite2D" parent="Bonus/FinishLine" unique_id=714787931]
+z_index = -1
+position = Vector2(241, -266)
+texture = ExtResource("36_smamy")
+script = ExtResource("13_hmsu6")
+
 [node name="QuestionBlock4" parent="Bonus" unique_id=1807828240 instance=ExtResource("20_megjd")]
 position = Vector2(8432, 368)
-result = SubResource("Resource_bc7r4")
+result = SubResource("Resource_jgvgg")
 
 [connection signal="scroll_stopped" from="Path2D/PathFollow2D" to="TileMapLayer" method="set_process_mode" binds= [4]]

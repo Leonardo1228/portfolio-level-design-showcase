@@ -106,6 +106,13 @@ scenes/2/scene = ExtResource("19_a4byd")
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetScenesCollectionSource_ngokg")
 
+[sub_resource type="Resource" id="Resource_k8dd6"]
+resource_local_to_scene = true
+script = ExtResource("23_tqa2n")
+creation_fallback_node = ExtResource("21_h8fri")
+creation_nodepack = ExtResource("22_ba5on")
+trans_inheritances = 7
+
 [sub_resource type="Resource" id="Resource_ixila"]
 resource_local_to_scene = true
 script = ExtResource("23_tqa2n")
@@ -116,24 +123,17 @@ trans_inheritances = 7
 [sub_resource type="Resource" id="Resource_uhnas"]
 resource_local_to_scene = true
 script = ExtResource("23_tqa2n")
-creation_fallback_node = ExtResource("21_h8fri")
-creation_nodepack = ExtResource("22_ba5on")
+creation_nodepack = ExtResource("25_y0f3h")
 trans_inheritances = 7
 
 [sub_resource type="Resource" id="Resource_jnq2c"]
 resource_local_to_scene = true
 script = ExtResource("23_tqa2n")
-creation_nodepack = ExtResource("25_y0f3h")
-trans_inheritances = 7
-
-[sub_resource type="Resource" id="Resource_xvthe"]
-resource_local_to_scene = true
-script = ExtResource("23_tqa2n")
 creation_fallback_node = ExtResource("21_h8fri")
 creation_nodepack = ExtResource("22_ba5on")
 trans_inheritances = 7
 
-[sub_resource type="Resource" id="Resource_3cfjw"]
+[sub_resource type="Resource" id="Resource_xvthe"]
 resource_local_to_scene = true
 script = ExtResource("23_tqa2n")
 creation_nodepack = ExtResource("25_y0f3h")
@@ -288,8 +288,8 @@ size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("14_s045k")
 text = "LEVEL
 -2
-UNDERGOUND
-TEMPO"
+OFFENSIVE
+CAVE!"
 horizontal_alignment = 1
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=594749613]
@@ -380,18 +380,18 @@ tile_set = SubResource("TileSet_87k04")
 
 [node name="QuestionBlock" parent="Bonus" unique_id=904378010 instance=ExtResource("20_m0xqr")]
 position = Vector2(336, 81)
-result = SubResource("Resource_ixila")
+result = SubResource("Resource_k8dd6")
 
 [node name="CoinBrick" parent="Bonus" unique_id=1758108504 instance=ExtResource("24_akw47")]
 position = Vector2(832, 240)
 
 [node name="QuestionBlock2" parent="Bonus" unique_id=1138742485 instance=ExtResource("20_m0xqr")]
 position = Vector2(3823, 752)
-result = SubResource("Resource_uhnas")
+result = SubResource("Resource_ixila")
 
 [node name="QuestionBlock3" parent="Bonus" unique_id=659683068 instance=ExtResource("20_m0xqr")]
 position = Vector2(4304, 144)
-result = SubResource("Resource_jnq2c")
+result = SubResource("Resource_uhnas")
 initially_visible_and_solid = false
 
 [node name="CoinBrick2" parent="Bonus" unique_id=1895787574 instance=ExtResource("24_akw47")]
@@ -400,7 +400,7 @@ position = Vector2(5968, 336)
 [node name="QuestionBlock4" parent="Bonus" unique_id=930714325 instance=ExtResource("20_m0xqr")]
 z_index = 1
 position = Vector2(6352, 16)
-result = SubResource("Resource_xvthe")
+result = SubResource("Resource_jnq2c")
 
 [node name="Brick5" parent="Bonus" unique_id=154074202 instance=ExtResource("17_iolee")]
 position = Vector2(6096, 464)
@@ -425,7 +425,7 @@ position = Vector2(1264, 208)
 
 [node name="QuestionBlock5" parent="Bonus" unique_id=1048295030 instance=ExtResource("20_m0xqr")]
 position = Vector2(1904, 272)
-result = SubResource("Resource_3cfjw")
+result = SubResource("Resource_xvthe")
 initially_visible_and_solid = false
 exists_once = true
 
