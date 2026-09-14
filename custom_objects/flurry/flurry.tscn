@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://7nsy3pqvgt3y"]
+
+[ext_resource type="Script" uid="uid://xv2wkqwtgxhl" path="res://custom_objects/flurry/flurry.gd" id="1_1ljsj"]
+[ext_resource type="Script" uid="uid://1n3p7ctv1snn" path="res://engine/scripts/nodes/enemies/enemy_attacked.gd" id="2_1ljsj"]
+[ext_resource type="PackedScene" uid="uid://oe7i3cief0g" path="res://engine/objects/enemies/_dead/enemy_killed.tscn" id="3_vu52r"]
+[ext_resource type="Script" uid="uid://du32vchaulqj6" path="res://engine/objects/enemies/_dead/prefabs/do_killed.gd" id="4_um410"]
+[ext_resource type="Script" uid="uid://bm81fg3h4j8sj" path="res://engine/scripts/resources/instance_node2d/instance_node2d.gd" id="5_wj2di"]
+[ext_resource type="AudioStream" uid="uid://46ern2rknx3i" path="res://engine/objects/enemies/_sounds/stomp.wav" id="6_b5gyh"]
+[ext_resource type="AudioStream" uid="uid://be3uvqev2c1p6" path="res://engine/objects/players/prefabs/sounds/kick.wav" id="7_38a1t"]
+[ext_resource type="Texture2D" uid="uid://dxi4qu3e4dbbg" path="res://custom_objects/flurry/texture/flurry_run.png" id="8_c80mk"]
+[ext_resource type="Script" uid="uid://doq0qyrr5ihr6" path="res://engine/scripts/nodes/vision/vision.gd" id="9_isu70"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b14ki"]
+size = Vector2(30, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajv6t"]
+size = Vector2(30, 30)
+
+[sub_resource type="Resource" id="Resource_yxgdc"]
+resource_local_to_scene = true
+script = ExtResource("5_wj2di")
+creation_nodepack = ExtResource("3_vu52r")
+trans_inheritances = 7
+visi_z_index = 1
+custom_vars = {
+"death": NodePath("../../Sprite"),
+"death_speed": Vector2(0, 0),
+"min_quality_offset": Vector2(0, -16)
+}
+custom_script = ExtResource("4_um410")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33x76"]
+atlas = ExtResource("8_c80mk")
+region = Rect2(0, 0, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wam8"]
+atlas = ExtResource("8_c80mk")
+region = Rect2(31, 0, 31, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_87k04"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33x76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wam8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Flurry" type="CharacterBody2D" unique_id=1262651345]
+collision_layer = 2
+collision_mask = 32
+floor_max_angle = 0.83775806
+floor_snap_length = 5.0
+script = ExtResource("1_1ljsj")
+turn_speed = 6.0
+look_at_player = true
+sprite = NodePath("Sprite")
+speed = Vector2(245, 0)
+gravity_scale = 0.5
+metadata/_custom_type_script = "uid://co5dvlw7m0osv"
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1950330904]
+visible = false
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_b14ki")
+
+[node name="Body" type="Area2D" parent="." unique_id=1148472087]
+process_mode = 3
+collision_layer = 2
+collision_mask = 5
+
+[node name="Collision" type="CollisionShape2D" parent="Body" unique_id=1843478337]
+visible = false
+shape = SubResource("RectangleShape2D_ajv6t")
+debug_color = Color(0, 0.643137, 0.309804, 0.419608)
+
+[node name="EnemyAttacked" type="Node" parent="Body" unique_id=439586063]
+script = ExtResource("2_1ljsj")
+stomping_creation = SubResource("Resource_yxgdc")
+stomping_scores = 100
+stomping_sound = ExtResource("6_b5gyh")
+killing_creation = SubResource("Resource_yxgdc")
+killing_scores = 200
+killing_sound_succeeded = ExtResource("7_38a1t")
+ice_sprite = NodePath("../../Sprite")
+metadata/_edit_pinned_properties_ = [&"stomping_sound", &"stomping_scores", &"stomping_creation", &"killing_creation", &"killing_scores", &"killing_sound_succeeded"]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=338022357]
+sprite_frames = SubResource("SpriteFrames_87k04")
+autoplay = "default"
+frame_progress = 0.34610453
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1249607043]
+self_modulate = Color(1, 1, 1, 0.0196078)
+rect = Rect2(-16, -16, 32, 32)
+script = ExtResource("9_isu70")
+metadata/_edit_lock_ = true
+
+[connection signal="collided_wall" from="." to="." method="turn_x"]
+[connection signal="killed_succeeded" from="Body/EnemyAttacked" to="." method="queue_free"]
+[connection signal="killed_succeeded" from="Body/EnemyAttacked" to="Sprite" method="set_speed_scale"]
+[connection signal="stomped_succeeded" from="Body/EnemyAttacked" to="." method="queue_free"]
+[connection signal="stomped_succeeded" from="Body/EnemyAttacked" to="Sprite" method="set_speed_scale"]
