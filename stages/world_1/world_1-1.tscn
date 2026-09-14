@@ -46,13 +46,13 @@ width = 640
 height = 480
 fill_to = Vector2(0, 1)
 
-[sub_resource type="Resource" id="Resource_7xmv7"]
+[sub_resource type="Resource" id="Resource_7eu08"]
 resource_local_to_scene = true
 script = ExtResource("14_mssfw")
 creation_nodepack = ExtResource("13_s7dgs")
 trans_inheritances = 7
 
-[sub_resource type="Resource" id="Resource_mo38q"]
+[sub_resource type="Resource" id="Resource_7xmv7"]
 resource_local_to_scene = true
 script = ExtResource("14_mssfw")
 creation_nodepack = ExtResource("13_s7dgs")
@@ -72,11 +72,17 @@ script = ExtResource("14_mssfw")
 creation_nodepack = ExtResource("24_ku7ex")
 metadata/_custom_type_script = "uid://chvjy6okoognf"
 
-[sub_resource type="Resource" id="Resource_jdous"]
+[sub_resource type="Resource" id="Resource_mo38q"]
 resource_local_to_scene = true
 script = ExtResource("14_mssfw")
 creation_fallback_node = ExtResource("26_7eu08")
 creation_nodepack = ExtResource("27_7xmv7")
+trans_inheritances = 7
+
+[sub_resource type="Resource" id="Resource_jdous"]
+resource_local_to_scene = true
+script = ExtResource("14_mssfw")
+creation_nodepack = ExtResource("13_s7dgs")
 trans_inheritances = 7
 
 [sub_resource type="Resource" id="Resource_l4mdm"]
@@ -88,32 +94,32 @@ trans_inheritances = 7
 [sub_resource type="Resource" id="Resource_cc1fh"]
 resource_local_to_scene = true
 script = ExtResource("14_mssfw")
-creation_nodepack = ExtResource("13_s7dgs")
+creation_nodepack = ExtResource("24_ku7ex")
 trans_inheritances = 7
 
 [sub_resource type="Resource" id="Resource_8011h"]
 resource_local_to_scene = true
 script = ExtResource("14_mssfw")
-creation_nodepack = ExtResource("24_ku7ex")
-trans_inheritances = 7
-
-[sub_resource type="Resource" id="Resource_a5al4"]
-resource_local_to_scene = true
-script = ExtResource("14_mssfw")
 creation_nodepack = ExtResource("13_s7dgs")
 trans_inheritances = 7
 
-[sub_resource type="Resource" id="Resource_4bbke"]
+[sub_resource type="Resource" id="Resource_a5al4"]
 resource_local_to_scene = true
 script = ExtResource("14_mssfw")
 creation_fallback_node = ExtResource("26_7eu08")
 creation_nodepack = ExtResource("27_7xmv7")
 trans_inheritances = 7
 
-[sub_resource type="Resource" id="Resource_xuu66"]
+[sub_resource type="Resource" id="Resource_4bbke"]
 resource_local_to_scene = true
 script = ExtResource("14_mssfw")
 creation_nodepack = ExtResource("24_ku7ex")
+trans_inheritances = 7
+
+[sub_resource type="Resource" id="Resource_xuu66"]
+resource_local_to_scene = true
+script = ExtResource("14_mssfw")
+creation_nodepack = ExtResource("13_s7dgs")
 trans_inheritances = 7
 
 [sub_resource type="Resource" id="Resource_h6fya"]
@@ -125,7 +131,7 @@ trans_inheritances = 7
 [sub_resource type="Resource" id="Resource_68kbl"]
 resource_local_to_scene = true
 script = ExtResource("14_mssfw")
-creation_nodepack = ExtResource("13_s7dgs")
+creation_nodepack = ExtResource("32_8011h")
 trans_inheritances = 7
 
 [sub_resource type="Resource" id="Resource_y4umw"]
@@ -137,7 +143,7 @@ trans_inheritances = 7
 [sub_resource type="Resource" id="Resource_rnad5"]
 resource_local_to_scene = true
 script = ExtResource("14_mssfw")
-creation_nodepack = ExtResource("32_8011h")
+creation_nodepack = ExtResource("24_ku7ex")
 trans_inheritances = 7
 
 [sub_resource type="Resource" id="Resource_7r6pa"]
@@ -147,12 +153,6 @@ creation_nodepack = ExtResource("24_ku7ex")
 trans_inheritances = 7
 
 [sub_resource type="Resource" id="Resource_4g1qw"]
-resource_local_to_scene = true
-script = ExtResource("14_mssfw")
-creation_nodepack = ExtResource("24_ku7ex")
-trans_inheritances = 7
-
-[sub_resource type="Resource" id="Resource_xv0r5"]
 resource_local_to_scene = true
 script = ExtResource("14_mssfw")
 creation_nodepack = ExtResource("24_ku7ex")
@@ -230,23 +230,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="QuestionBlock2" parent="." unique_id=982007403 instance=ExtResource("12_smf7x")]
 position = Vector2(-425, 968)
-result = SubResource("Resource_7xmv7")
+result = SubResource("Resource_7eu08")
 
 [node name="QuestionBlock3" parent="." unique_id=1372771028 instance=ExtResource("12_smf7x")]
 position = Vector2(-297, 968)
-result = SubResource("Resource_mo38q")
-
-[node name="LabelMisterEarl4" parent="." unique_id=914191916 instance=ExtResource("15_smf7x")]
-z_index = -1
-offset_left = -745.0
-offset_top = 840.0
-offset_right = -471.0
-offset_bottom = 920.0
-text = "these question blocks use godot's signals
-to trigger achievements,
-
-see \"secretunlocker\" node
-to modify them!"
+result = SubResource("Resource_7xmv7")
 
 [node name="LabelMisterEarl2" parent="." unique_id=1485092168 instance=ExtResource("15_smf7x")]
 z_index = -1
@@ -329,23 +317,23 @@ position = Vector2(1520, 144)
 
 [node name="QuestionBlockFireFlower" parent="Bonus" unique_id=1928634976 instance=ExtResource("25_cnie7")]
 position = Vector2(1488, 144)
-result = SubResource("Resource_jdous")
+result = SubResource("Resource_mo38q")
 
 [node name="QuestionBlock" parent="Bonus" unique_id=1319373763 instance=ExtResource("28_mo38q")]
 position = Vector2(2224, 240)
-result = SubResource("Resource_l4mdm")
+result = SubResource("Resource_jdous")
 
 [node name="QuestionBlock2" parent="Bonus" unique_id=498502122 instance=ExtResource("28_mo38q")]
 position = Vector2(2256, 240)
-result = SubResource("Resource_cc1fh")
+result = SubResource("Resource_l4mdm")
 
 [node name="QuestionBlockPoisonous" parent="Bonus" unique_id=1077108751 instance=ExtResource("29_jdous")]
 position = Vector2(2288, 240)
-result = SubResource("Resource_8011h")
+result = SubResource("Resource_cc1fh")
 
 [node name="QuestionBlock3" parent="Bonus" unique_id=1090022272 instance=ExtResource("28_mo38q")]
 position = Vector2(2320, 240)
-result = SubResource("Resource_a5al4")
+result = SubResource("Resource_8011h")
 
 [node name="Brick8" parent="Bonus" unique_id=1334087965 instance=ExtResource("23_hkanf")]
 position = Vector2(3568, 112)
@@ -355,26 +343,26 @@ position = Vector2(3632, 112)
 
 [node name="QuestionBlockFireFlower2" parent="Bonus" unique_id=888070379 instance=ExtResource("25_cnie7")]
 position = Vector2(3600, 112)
-result = SubResource("Resource_4bbke")
+result = SubResource("Resource_a5al4")
 
 [node name="QuestionBlockPoisonous2" parent="Bonus" unique_id=1390797863 instance=ExtResource("29_jdous")]
 position = Vector2(5616, 48)
-result = SubResource("Resource_xuu66")
+result = SubResource("Resource_4bbke")
 
 [node name="QuestionBlock4" parent="Bonus" unique_id=1387715178 instance=ExtResource("12_smf7x")]
 position = Vector2(6000, 304)
-result = SubResource("Resource_h6fya")
+result = SubResource("Resource_xuu66")
 
 [node name="QuestionBlock5" parent="Bonus" unique_id=1843997113 instance=ExtResource("12_smf7x")]
 position = Vector2(5968, 304)
-result = SubResource("Resource_68kbl")
+result = SubResource("Resource_h6fya")
 
 [node name="Brick10" parent="Bonus" unique_id=578550591 instance=ExtResource("30_l4mdm")]
 position = Vector2(6608, 112)
 
 [node name="QuestionBlockLife" parent="Bonus" unique_id=299248554 instance=ExtResource("31_cc1fh")]
 position = Vector2(8080, 16)
-result = SubResource("Resource_y4umw")
+result = SubResource("Resource_68kbl")
 initially_visible_and_solid = false
 
 [node name="Brick11" parent="Bonus" unique_id=878689449 instance=ExtResource("23_hkanf")]
@@ -406,20 +394,20 @@ position = Vector2(-240, 112)
 
 [node name="QuestionBlockLife2" parent="Bonus" unique_id=537741810 instance=ExtResource("31_cc1fh")]
 position = Vector2(-176, 112)
-result = SubResource("Resource_rnad5")
+result = SubResource("Resource_y4umw")
 initially_visible_and_solid = false
 
 [node name="QuestionBlockPoisonous3" parent="Bonus" unique_id=546913959 instance=ExtResource("29_jdous")]
 position = Vector2(7184, 304)
-result = SubResource("Resource_7r6pa")
+result = SubResource("Resource_rnad5")
 
 [node name="QuestionBlockPoisonous4" parent="Bonus" unique_id=539041201 instance=ExtResource("29_jdous")]
 position = Vector2(5424, 176)
-result = SubResource("Resource_4g1qw")
+result = SubResource("Resource_7r6pa")
 
 [node name="QuestionBlockPoisonous5" parent="Bonus" unique_id=50870190 instance=ExtResource("29_jdous")]
 position = Vector2(8112, 16)
-result = SubResource("Resource_xv0r5")
+result = SubResource("Resource_4g1qw")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1492494177]
 
