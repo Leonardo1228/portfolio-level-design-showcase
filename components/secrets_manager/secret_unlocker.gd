@@ -78,3 +78,7 @@ func add_bad_stuff_to_profile(data: String, value: bool = true) -> void:
 
 func _on_level_5_level_completed() -> void:
 	pass # Replace with function body.
+
+
+func _on_human_lab_mayhem_level_completed() -> void:
+	pass # Replace with function body.

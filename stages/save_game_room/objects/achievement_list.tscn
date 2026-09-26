@@ -15,3 +15,4 @@ secret_id = "MAIN WORLD COMPLETED"
 layout_mode = 2
 entry_name = "ALL EXTRA LEVELS COMPLETED         "
 secret_id = "EXTRA LEVELS COMPLETED"
+progress_to = 5
