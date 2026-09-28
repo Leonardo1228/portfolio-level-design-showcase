@@ -19,9 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://5ssr5jwpsldi" path="res://engine/objects/bumping_blocks/question_block/templates/Coin Question Block.tscn" id="17_fj0d2"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="18_njbg0"]
 [ext_resource type="Script" uid="uid://chvjy6okoognf" path="res://engine/objects/powerups/instance_powerup.gd" id="19_u8ftm"]
-[ext_resource type="PackedScene" uid="uid://b7tkooebfam48" path="res://engine/objects/bumping_blocks/question_block/templates/Fire Flower Question Block.tscn" id="20_8800j"]
 [ext_resource type="PackedScene" uid="uid://b71msw28e37a" path="res://engine/objects/powerups/red_mushroom/red_mushroom.tscn" id="21_1f2b7"]
-[ext_resource type="PackedScene" uid="uid://bsdcxwngf5hru" path="res://engine/objects/powerups/fire_flower/fire_flower.tscn" id="22_wb1vu"]
 [ext_resource type="PackedScene" uid="uid://dbpihjuw0gc01" path="res://engine/objects/bumping_blocks/question_block/templates/Beetroot Question Block.tscn" id="23_fj0d2"]
 [ext_resource type="PackedScene" uid="uid://buhj2gmfji4vf" path="res://custom_objects/coin_offset.tscn" id="23_m1u2x"]
 [ext_resource type="PackedScene" uid="uid://8a7nemgi0b6q" path="res://engine/objects/powerups/beetroot/beetroot.tscn" id="24_njbg0"]
@@ -83,16 +81,38 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Resource" id="Resource_wb1vu"]
+resource_local_to_scene = true
+script = ExtResource("19_u8ftm")
+creation_nodepack = ExtResource("18_njbg0")
+trans_inheritances = 7
+
+[sub_resource type="Resource" id="Resource_m1u2x"]
+resource_local_to_scene = true
+script = ExtResource("19_u8ftm")
+creation_nodepack = ExtResource("18_njbg0")
+trans_inheritances = 7
+
 [sub_resource type="Resource" id="Resource_f0vey"]
 resource_local_to_scene = true
 script = ExtResource("19_u8ftm")
 creation_nodepack = ExtResource("18_njbg0")
 trans_inheritances = 7
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_7lyxn"]
+resource_name = "coins"
+scenes/1/scene = ExtResource("23_m1u2x")
+scenes/2/scene = ExtResource("18_njbg0")
+
+[sub_resource type="TileSet" id="TileSet_87k04"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetScenesCollectionSource_7lyxn")
+
 [sub_resource type="Resource" id="Resource_echc7"]
 resource_local_to_scene = true
 script = ExtResource("19_u8ftm")
-creation_nodepack = ExtResource("18_njbg0")
+creation_fallback_node = ExtResource("21_1f2b7")
+creation_nodepack = ExtResource("24_njbg0")
 trans_inheritances = 7
 
 [sub_resource type="Resource" id="Resource_uafyi"]
@@ -105,47 +125,26 @@ trans_inheritances = 7
 resource_local_to_scene = true
 script = ExtResource("19_u8ftm")
 creation_fallback_node = ExtResource("21_1f2b7")
-creation_nodepack = ExtResource("22_wb1vu")
+creation_nodepack = ExtResource("24_njbg0")
 trans_inheritances = 7
-
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_7lyxn"]
-resource_name = "coins"
-scenes/1/scene = ExtResource("23_m1u2x")
-scenes/2/scene = ExtResource("18_njbg0")
-
-[sub_resource type="TileSet" id="TileSet_87k04"]
-tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetScenesCollectionSource_7lyxn")
 
 [sub_resource type="Resource" id="Resource_7lyxn"]
-resource_local_to_scene = true
-script = ExtResource("19_u8ftm")
-creation_fallback_node = ExtResource("21_1f2b7")
-creation_nodepack = ExtResource("24_njbg0")
-trans_inheritances = 7
-
-[sub_resource type="Resource" id="Resource_sqgmd"]
-resource_local_to_scene = true
-script = ExtResource("19_u8ftm")
-creation_nodepack = ExtResource("18_njbg0")
-trans_inheritances = 7
-
-[sub_resource type="Resource" id="Resource_7hj0k"]
-resource_local_to_scene = true
-script = ExtResource("19_u8ftm")
-creation_fallback_node = ExtResource("21_1f2b7")
-creation_nodepack = ExtResource("24_njbg0")
-trans_inheritances = 7
-
-[sub_resource type="Resource" id="Resource_7trxe"]
 resource_local_to_scene = true
 script = ExtResource("19_u8ftm")
 creation_nodepack = ExtResource("27_m1u2x")
 trans_inheritances = 7
 
+[sub_resource type="Resource" id="Resource_sqgmd"]
+resource_local_to_scene = true
+script = ExtResource("19_u8ftm")
+creation_fallback_node = ExtResource("21_1f2b7")
+creation_nodepack = ExtResource("24_njbg0")
+trans_inheritances = 7
+
 [node name="Level-4" type="Node2D" unique_id=432947480]
 script = ExtResource("1_a1kd5")
 completion_music = ExtResource("2_7j6n7")
+jump_to_scene = "uid://cvdgydalqybg4"
 
 [node name="MusicLoader" parent="." unique_id=1674830763 instance=ExtResource("3_lpsj2")]
 music = Array[Resource]([SubResource("AudioStreamOggVorbis_m2t2r")])
@@ -399,19 +398,15 @@ position = Vector2(4103, 400)
 
 [node name="QuestionBlock" parent="Bonus" unique_id=1387715178 instance=ExtResource("17_fj0d2")]
 position = Vector2(2224, 176)
-result = SubResource("Resource_f0vey")
+result = SubResource("Resource_wb1vu")
 
 [node name="QuestionBlock2" parent="Bonus" unique_id=221296709 instance=ExtResource("17_fj0d2")]
 position = Vector2(2320, 176)
-result = SubResource("Resource_echc7")
+result = SubResource("Resource_m1u2x")
 
 [node name="QuestionBlock3" parent="Bonus" unique_id=1755188640 instance=ExtResource("17_fj0d2")]
 position = Vector2(2288, 176)
-result = SubResource("Resource_uafyi")
-
-[node name="QuestionBlockFireFlower" parent="Bonus" unique_id=1928634976 instance=ExtResource("20_8800j")]
-position = Vector2(2256, 176)
-result = SubResource("Resource_nqqkd")
+result = SubResource("Resource_f0vey")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Bonus" unique_id=1248416359]
 tile_map_data = PackedByteArray("AAAbAAcAAAAAAAAAAgAbAAYAAAAAAAAAAgAbAAUAAAAAAAAAAgA/AAMAAAAAAAAAAgBBAAUAAAAAAAAAAgA1AAUAAAAAAAAAAgA1AAQAAAAAAAAAAgA1AAMAAAAAAAAAAgBtAAQAAAAAAAAAAQBtAAMAAAAAAAAAAQBtAAIAAAAAAAAAAQB3AAgAAAAAAAAAAgB5AAkAAAAAAAAAAgB8AAkAAAAAAAAAAQB/AAkAAAAAAAAAAQCEAAkAAAAAAAAAAgCGAAgAAAAAAAAAAgCPAAgAAAAAAAAAAgCQAAkAAAAAAAAAAgCSAAkAAAAAAAAAAgCTAAgAAAAAAAAAAgCkAAUAAAAAAAAAAgClAAUAAAAAAAAAAgCmAAUAAAAAAAAAAgCmAAQAAAAAAAAAAgClAAQAAAAAAAAAAgCkAAQAAAAAAAAAAgDDAAcAAAAAAAAAAgDEAAcAAAAAAAAAAgDFAAcAAAAAAAAAAgDGAAcAAAAAAAAAAgDRAAEAAAAAAAAAAgDSAAEAAAAAAAAAAgDTAAEAAAAAAAAAAgDUAAEAAAAAAAAAAgDgAAkAAAAAAAAAAgDgAAsAAAAAAAAAAgDiAAsAAAAAAAAAAgDkAAsAAAAAAAAAAgDkAAkAAAAAAAAAAgAFAQcAAAAAAAAAAQAFAQYAAAAAAAAAAQAFAQUAAAAAAAAAAQAFAQQAAAAAAAAAAQAKAQQAAAAAAAAAAQAKAQUAAAAAAAAAAQAKAQYAAAAAAAAAAQAKAQcAAAAAAAAAAQA=")
@@ -419,22 +414,22 @@ tile_set = SubResource("TileSet_87k04")
 
 [node name="QuestionBlockBeetroot" parent="Bonus" unique_id=1108888452 instance=ExtResource("23_fj0d2")]
 position = Vector2(4688, 16)
-result = SubResource("Resource_7lyxn")
+result = SubResource("Resource_echc7")
 
 [node name="Checkpoint" parent="Bonus" unique_id=1170161289 instance=ExtResource("25_njbg0")]
 position = Vector2(5647, 319)
 
 [node name="QuestionBlock4" parent="Bonus" unique_id=303869057 instance=ExtResource("17_fj0d2")]
 position = Vector2(6512, 80)
-result = SubResource("Resource_sqgmd")
+result = SubResource("Resource_uafyi")
 
 [node name="QuestionBlockBeetroot2" parent="Bonus" unique_id=1996349904 instance=ExtResource("23_fj0d2")]
 position = Vector2(6544, 80)
-result = SubResource("Resource_7hj0k")
+result = SubResource("Resource_nqqkd")
 
 [node name="QuestionBlockLife" parent="Bonus" unique_id=299248554 instance=ExtResource("26_wb1vu")]
 position = Vector2(7280, 16)
-result = SubResource("Resource_7trxe")
+result = SubResource("Resource_7lyxn")
 initially_visible_and_solid = false
 exists_once = true
 
@@ -458,6 +453,10 @@ z_index = -1
 position = Vector2(241, -266)
 texture = ExtResource("29_f0vey")
 script = ExtResource("30_uafyi")
+
+[node name="QuestionBlockBeetroot3" parent="Bonus" unique_id=215075496 instance=ExtResource("23_fj0d2")]
+position = Vector2(2256, 176)
+result = SubResource("Resource_sqgmd")
 
 [node name="Wodospad" parent="." unique_id=1857217934 instance=ExtResource("8_t5gnn")]
 position = Vector2(960, 434)

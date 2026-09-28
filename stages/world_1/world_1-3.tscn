@@ -93,7 +93,7 @@ trans_inheritances = 7
 script = ExtResource("1_ipu61")
 time = 600
 completion_music = ExtResource("2_br37x")
-jump_to_scene = "uid://dulml77f8yku5"
+jump_to_scene = "uid://cvdgydalqybg4"
 metadata/_custom_type_script = "uid://dh7ob1sbo8lx7"
 
 [node name="MusicLoader" parent="." unique_id=1674830763 instance=ExtResource("3_omobe")]
@@ -229,7 +229,7 @@ offset_bottom = 15.84
 position = Vector2(3678, 34)
 
 [node name="HammerBro" parent="Enemies" unique_id=253547180 instance=ExtResource("25_78cv8")]
-position = Vector2(4196, 176)
+position = Vector2(4211, 336)
 
 [node name="HammerBroJumpMarker" parent="Enemies" unique_id=1157611916 instance=ExtResource("26_d074b")]
 position = Vector2(4096, 160)

@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cpme7ixwwuc2p" path="res://engine/scenes/main_menu/controls.tscn" id="8_iq8be"]
 [ext_resource type="Script" uid="uid://bkeybtjyi0dba" path="res://engine/scenes/main_menu/scripts/selector_blinking.gd" id="11_4wjuy"]
 [ext_resource type="PackedScene" uid="uid://c2mch7wqmlcgp" path="res://stages/main_menu/objects/tweaks.tscn" id="12_4lap8"]
+[ext_resource type="Texture2D" uid="uid://k2431io5ohv7" path="res://graphics/MF1.16.1_LOGO.png" id="13_8ei0a"]
+[ext_resource type="Texture2D" uid="uid://kq05w5ax0hn8" path="res://graphics/map/map_text.png" id="14_yb6nn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v54by"]
 atlas = ExtResource("3_b1pty")
@@ -116,6 +118,14 @@ script = ExtResource("6_521mh")
 [node name="Node" type="Node" parent="Menu" unique_id=126960760]
 script = ExtResource("11_4wjuy")
 menu_items_controller_path = NodePath("../MainMenuControls")
+
+[node name="MF_Logo" type="Sprite2D" parent="Menu" unique_id=1838741943]
+position = Vector2(313, 128)
+texture = ExtResource("13_8ei0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="Menu" unique_id=287497270]
+position = Vector2(320, 267)
+texture = ExtResource("14_yb6nn")
 
 [node name="Settings" parent="." unique_id=261911876 instance=ExtResource("7_r3wt2")]
 layout_mode = 1
