@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dgr13oxpp4nke"]
+
+[ext_resource type="Texture2D" uid="uid://b66xptngvj5ab" path="res://graphics/snowland/snow_goomba.png" id="1_y6l2l"]
+
+[node name="SnowGoomba" type="Sprite2D" unique_id=1236237774]
+texture = ExtResource("1_y6l2l")

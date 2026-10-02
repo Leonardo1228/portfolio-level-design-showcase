@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bt3p8387pxrmk"]
+
+[ext_resource type="Texture2D" uid="uid://di04es5ivuepa" path="res://graphics/snowland/snowman_2.png" id="1_olq54"]
+
+[node name="Snowman2" type="Sprite2D" unique_id=737725574]
+position = Vector2(0, -16)
+texture = ExtResource("1_olq54")

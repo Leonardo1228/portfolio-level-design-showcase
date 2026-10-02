@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c2mch7wqmlcgp" path="res://stages/main_menu/objects/tweaks.tscn" id="12_4lap8"]
 [ext_resource type="Texture2D" uid="uid://k2431io5ohv7" path="res://graphics/MF1.16.1_LOGO.png" id="13_8ei0a"]
 [ext_resource type="Texture2D" uid="uid://kq05w5ax0hn8" path="res://graphics/map/map_text.png" id="14_yb6nn"]
+[ext_resource type="FontVariation" uid="uid://cvpi00hlh84rv" path="res://engine/fonts/font_variations/tweaks_font_title.tres" id="15_yb6nn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v54by"]
 atlas = ExtResource("3_b1pty")
@@ -79,9 +80,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -88.0
+offset_left = -100.0
 offset_top = -184.0
-offset_right = 88.0
+offset_right = 113.0
 offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -126,6 +127,25 @@ texture = ExtResource("13_8ei0a")
 [node name="Sprite2D" type="Sprite2D" parent="Menu" unique_id=287497270]
 position = Vector2(320, 267)
 texture = ExtResource("14_yb6nn")
+
+[node name="GameVersion" type="Label" parent="Menu" unique_id=401044769]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 435.0
+offset_right = 113.0
+offset_bottom = 452.0
+size_flags_horizontal = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.435294)
+theme_override_colors/font_outline_color = Color(0, 0, 0.329412, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("15_yb6nn")
+theme_override_font_sizes/font_size = 22
+text = "VERSION 1.0
+by lay o' craft"
+uppercase = true
 
 [node name="Settings" parent="." unique_id=261911876 instance=ExtResource("7_r3wt2")]
 layout_mode = 1

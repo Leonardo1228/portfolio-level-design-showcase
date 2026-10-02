@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://duokoknroiksp"]
+
+[ext_resource type="Texture2D" uid="uid://c4lmq2ap4eo3j" path="res://graphics/snowland/long_snow_tree.png" id="1_0doyx"]
+
+[node name="LongSnowTree" type="Sprite2D" unique_id=539681669]
+position = Vector2(0, -32)
+texture = ExtResource("1_0doyx")

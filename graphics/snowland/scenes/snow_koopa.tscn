@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://clafh7a5kwm8o"]
+
+[ext_resource type="Texture2D" uid="uid://c2fko570eoj5v" path="res://graphics/snowland/snow_koopa.png" id="1_g3vsw"]
+
+[node name="SnowKoopa" type="Sprite2D" unique_id=2000818746]
+position = Vector2(0, -16)
+texture = ExtResource("1_g3vsw")
