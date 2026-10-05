@@ -552,6 +552,7 @@ text = "EXTRA LEVELS
 ZONE PART 1"
 horizontal_alignment = 1
 uppercase = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Sign3" type="Sprite2D" parent="." unique_id=163332308]
 position = Vector2(2700.0002, 231.99998)
@@ -569,6 +570,45 @@ theme_override_fonts/font = ExtResource("19_w2arp")
 theme_override_font_sizes/font_size = 21
 text = "EXTRA LEVELS
 ZONE PART 2"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Sign4" type="Sprite2D" parent="." unique_id=750480937]
+position = Vector2(1791, 264)
+texture = ExtResource("35_axewu")
+
+[node name="Label6" type="Label" parent="Sign4" unique_id=906040964]
+offset_left = -63.0
+offset_top = -47.0
+offset_right = 65.0
+offset_bottom = -14.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("19_w2arp")
+theme_override_font_sizes/font_size = 17
+text = "THIS PIPE IS NOT
+CONNECTED TO
+ANYTHING YET!	"
+horizontal_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Sign5" type="Sprite2D" parent="." unique_id=1092110418]
+position = Vector2(2832, 200)
+texture = ExtResource("35_axewu")
+
+[node name="Label6" type="Label" parent="Sign5" unique_id=1668113279]
+offset_left = -63.0
+offset_top = -46.0
+offset_right = 65.0
+offset_bottom = -17.0
+theme_override_colors/font_outline_color = Color(0, 0, 0.368627, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("19_w2arp")
+theme_override_font_sizes/font_size = 21
+text = "coming
+soon!"
 horizontal_alignment = 1
 uppercase = true
 metadata/_edit_use_anchors_ = true

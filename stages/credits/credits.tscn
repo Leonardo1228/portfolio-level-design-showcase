@@ -50,15 +50,15 @@ position = Vector2(323, 319)
 texture = ExtResource("7_8u3l2")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Text" unique_id=740783937]
-position = Vector2(322, 1516.405)
+position = Vector2(322, 1477.405)
 texture = ExtResource("8_1j8xo")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Text" unique_id=392255421]
 clip_contents = false
 layout_mode = 0
-offset_top = 396.0
+offset_top = 358.0
 offset_right = 640.0
-offset_bottom = 711.0
+offset_bottom = 1723.0
 size_flags_vertical = 8
 mouse_filter = 1
 theme_override_colors/font_outline_color = Color(0, 0, 0.466667, 1)
@@ -110,7 +110,6 @@ this game was brought to you by:
 Sergio leonardo vivas riaño
 
 owner of:
-
 
 
 
