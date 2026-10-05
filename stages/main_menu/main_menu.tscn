@@ -143,7 +143,7 @@ theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("15_yb6nn")
 theme_override_font_sizes/font_size = 30
-text = "VERSION 1.0 
+text = "VERSION 1.0.0
 by lay o' craft"
 uppercase = true
 
