@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Mario Forever - Thunder Engine"
+config/name="Mario Forever: The Lost Throwback"
 config/version="1.0.0"
 config/tags=PackedStringArray("game", "mario_forever", "thunder_engine")
 run/main_scene="res://stages/intro/intro.tscn"

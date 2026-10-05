@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dh7ob1sbo8lx7" path="res://engine/scripts/classes/level/level.gd" id="1_ipu61"]
 [ext_resource type="AudioStream" uid="uid://bqiy8kvcsy0rk" path="res://engine/scripts/classes/level/complete.ogg" id="2_br37x"]
 [ext_resource type="PackedScene" uid="uid://d3srfe2r6fg2u" path="res://engine/objects/core/music_loader/music_loader.tscn" id="3_omobe"]
-[ext_resource type="AudioStream" uid="uid://18q8jewhyks4" path="res://stages/world_1/music/military.it" id="4_sssj2"]
+[ext_resource type="AudioStream" uid="uid://18q8jewhyks4" path="res://stages/the_lost_throwback/music/military.it" id="4_sssj2"]
 [ext_resource type="PackedScene" uid="uid://1do11cr84k7y" path="res://engine/objects/players/player.tscn" id="5_sssj2"]
 [ext_resource type="Script" uid="uid://cugmax5psc2oo" path="res://engine/objects/players/player_camera_2d.gd" id="7_n04hj"]
 [ext_resource type="PackedScene" uid="uid://yqftjpfskche" path="res://engine/components/cam_area/cam_area.tscn" id="8_h0ikb"]
@@ -53,7 +53,7 @@ width = 640
 height = 480
 fill_to = Vector2(0, 1)
 
-[sub_resource type="Resource" id="Resource_smamy"]
+[sub_resource type="Resource" id="Resource_o4u5c"]
 resource_local_to_scene = true
 script = ExtResource("23_k40je")
 creation_fallback_node = ExtResource("21_5gtrk")
@@ -69,20 +69,20 @@ scenes/2/scene = ExtResource("29_78cv8")
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetScenesCollectionSource_smamy")
 
-[sub_resource type="Resource" id="Resource_nypa6"]
+[sub_resource type="Resource" id="Resource_2wfvt"]
 resource_local_to_scene = true
 script = ExtResource("23_k40je")
 creation_fallback_node = ExtResource("21_5gtrk")
 creation_nodepack = ExtResource("26_ytn4e")
 trans_inheritances = 7
 
-[sub_resource type="Resource" id="Resource_bc7r4"]
+[sub_resource type="Resource" id="Resource_3e8km"]
 resource_local_to_scene = true
 script = ExtResource("23_k40je")
 creation_nodepack = ExtResource("34_smamy")
 trans_inheritances = 7
 
-[sub_resource type="Resource" id="Resource_4f5n8"]
+[sub_resource type="Resource" id="Resource_6mvoj"]
 resource_local_to_scene = true
 script = ExtResource("23_k40je")
 creation_fallback_node = ExtResource("21_5gtrk")
@@ -369,9 +369,6 @@ position = Vector2(9665, 336)
 [node name="HammerBroJumpMarker5" parent="Enemies" unique_id=2104370491 instance=ExtResource("26_d074b")]
 position = Vector2(9528, 320)
 
-[node name="HammerBroJumpMarker6" parent="Enemies" unique_id=661050895 instance=ExtResource("26_d074b")]
-position = Vector2(9526, 128)
-
 [node name="Thwomp7" parent="Enemies" unique_id=1002072195 instance=ExtResource("26_c6fwo")]
 position = Vector2(10206, 34)
 
@@ -383,6 +380,13 @@ offset_left = 9824.0
 offset_top = 224.0
 offset_right = 9856.0
 offset_bottom = 352.0
+
+[node name="MissileBulletLauncher4" parent="Enemies" unique_id=773954563 instance=ExtResource("22_hmsu6")]
+position = Vector2(10224, 336)
+
+[node name="BulletBillBase" parent="Enemies/MissileBulletLauncher4" unique_id=1875851255 instance=ExtResource("18_h0ikb")]
+offset_top = -15.999996
+offset_bottom = 16.000004
 
 [node name="Bonus" type="Node2D" parent="." unique_id=1904403837]
 
@@ -397,7 +401,7 @@ position = Vector2(1232, 176)
 
 [node name="QuestionBlock" parent="Bonus" unique_id=1851736272 instance=ExtResource("20_megjd")]
 position = Vector2(1200, 176)
-result = SubResource("Resource_smamy")
+result = SubResource("Resource_o4u5c")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Bonus" unique_id=1274773672]
 tile_map_data = PackedByteArray("AABKAAYAAAAAAAAAAgBLAAYAAAAAAAAAAgBNAAYAAAAAAAAAAgBOAAYAAAAAAAAAAgBLAAcAAAAAAAAAAQBMAAcAAAAAAAAAAQBZAAUAAAAAAAAAAgBaAAUAAAAAAAAAAgARAQIAAAAAAAAAAQARAQMAAAAAAAAAAQARAQQAAAAAAAAAAQAVAQIAAAAAAAAAAQAVAQMAAAAAAAAAAQAVAQQAAAAAAAAAAQD+AAIAAAAAAAAAAgD9AAIAAAAAAAAAAgD5AAIAAAAAAAAAAgD4AAIAAAAAAAAAAgC6AAQAAAAAAAAAAgC6AAMAAAAAAAAAAgC2AAQAAAAAAAAAAgC2AAMAAAAAAAAAAgBXAAMAAAAAAAAAAQBbAAMAAAAAAAAAAQCUAAQAAAAAAAAAAgCUAAMAAAAAAAAAAgCUAAIAAAAAAAAAAgA=")
@@ -405,7 +409,7 @@ tile_set = SubResource("TileSet_87k04")
 
 [node name="QuestionBlock2" parent="Bonus" unique_id=153788626 instance=ExtResource("20_megjd")]
 position = Vector2(4880, 176)
-result = SubResource("Resource_nypa6")
+result = SubResource("Resource_2wfvt")
 
 [node name="Brick4" parent="Bonus" unique_id=564201849 instance=ExtResource("23_gshsv")]
 position = Vector2(4048, 208)
@@ -436,7 +440,7 @@ position = Vector2(4304, 208)
 
 [node name="QuestionBlock3" parent="Bonus" unique_id=1057396110 instance=ExtResource("20_megjd")]
 position = Vector2(4976, 176)
-result = SubResource("Resource_bc7r4")
+result = SubResource("Resource_3e8km")
 initially_visible_and_solid = false
 exists_once = true
 
@@ -463,6 +467,6 @@ script = ExtResource("13_hmsu6")
 
 [node name="QuestionBlock4" parent="Bonus" unique_id=1807828240 instance=ExtResource("20_megjd")]
 position = Vector2(8432, 368)
-result = SubResource("Resource_4f5n8")
+result = SubResource("Resource_6mvoj")
 
 [connection signal="scroll_stopped" from="Path2D/PathFollow2D" to="TileMapLayer" method="set_process_mode" binds= [4]]
